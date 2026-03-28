@@ -30,15 +30,20 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(244, 63, 94, 0.9), rgba(253, 186, 116, 0.8)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Dotonbori_Osaka_Japan01bs3.jpg/1200px-Dotonbori_Osaka_Japan01bs3.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#f43f5e', // Rose
-                        secondary: '#3b82f6', // Blue
-                        accent: '#f59e0b', // Amber
+                        primary: '#f43f5e',
+                        secondary: '#3b82f6',
+                        accent: '#f59e0b',
                     }
                 }
             }
@@ -48,20 +53,20 @@
 <body class="text-slate-800 antialiased pb-20">
 
     <!-- Header / Hero Section -->
-    <header class="bg-gradient-to-r from-rose-400 to-orange-300 text-white pt-16 pb-12 px-6 rounded-b-3xl shadow-lg relative overflow-hidden">
-        <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+    <header class="hero-bg text-white pt-20 pb-16 px-6 rounded-b-3xl shadow-lg relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-20 transform translate-x-10 -translate-y-10">
             <i class="fas fa-plane text-9xl"></i>
         </div>
         <div class="relative z-10 max-w-3xl mx-auto">
-            <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-1 text-sm font-medium mb-4">
+            <div class="inline-block bg-white/30 backdrop-blur-md rounded-full px-4 py-1 text-sm font-medium mb-4 shadow-sm">
                 <i class="fas fa-calendar-alt mr-2"></i> 2026/04/28 - 05/05
             </div>
-            <h1 class="text-4xl font-black mb-2 tracking-tight">尼克一家的關西耍廢遊</h1>
-            <p class="text-lg opacity-90 font-medium">睡飽、吃好、大口吃和牛 🥩🦀</p>
+            <h1 class="text-4xl sm:text-5xl font-black mb-3 tracking-tight drop-shadow-md">尼克一家的關西耍廢遊</h1>
+            <p class="text-lg sm:text-xl opacity-95 font-medium drop-shadow">睡飽、吃好、大口吃和牛 🥩🦀</p>
             
             <div class="mt-6 flex flex-wrap gap-2">
-                <span class="bg-white/20 px-3 py-1 rounded-full text-sm"><i class="fas fa-child mr-1"></i> 理悠 (3y) 午休保衛戰</span>
-                <span class="bg-white/20 px-3 py-1 rounded-full text-sm"><i class="fas fa-taxi mr-1"></i> 能坐車絕不走路</span>
+                <span class="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium border border-white/30"><i class="fas fa-child mr-1"></i> 理悠 (3y) 午休保衛戰</span>
+                <span class="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium border border-white/30"><i class="fas fa-taxi mr-1"></i> 能坐車絕不走路</span>
             </div>
         </div>
     </header>
@@ -93,8 +98,10 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
-                <div class="timeline-line"></div>
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Dotonbori_Osaka_Japan01bs3.jpg/800px-Dotonbori_Osaka_Japan01bs3.jpg" alt="大阪難波道頓堀" class="w-full h-40 object-cover rounded-2xl mb-6 shadow-sm">
+                
+                <div class="timeline-line mt-48"></div>
                 
                 <div class="relative z-10 flex gap-4 mb-6">
                     <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-plane"></i></div>
@@ -142,7 +149,9 @@
             </div>
             
             <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
-                <div class="timeline-line"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Osaka_Aquarium_Kaiyukan_01.jpg/800px-Osaka_Aquarium_Kaiyukan_01.jpg" alt="實際海遊館照片" class="w-full h-40 object-cover rounded-2xl mb-6 shadow-sm object-center">
+                
+                <div class="timeline-line mt-48"></div>
                 
                 <div class="relative z-10 flex gap-4 mb-6">
                     <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-sun"></i></div>
@@ -169,7 +178,7 @@
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100">
+                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100 shadow-sm">
                     <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-moon"></i></div>
                     <div>
                         <div class="font-bold text-lg text-indigo-900">14:30 午休保衛戰 (回飯店)</div>
@@ -199,7 +208,9 @@
             </div>
             
             <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
-                <div class="timeline-line"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Universal_Studios_Japan_globe.jpg/800px-Universal_Studios_Japan_globe.jpg" alt="實際日本環球影城地球" class="w-full h-40 object-cover rounded-2xl mb-6 shadow-sm object-center">
+                
+                <div class="timeline-line mt-48"></div>
                 
                 <div class="relative z-10 flex gap-4 mb-6">
                     <div class="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-magic"></i></div>
@@ -218,7 +229,7 @@
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100">
+                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100 shadow-sm">
                     <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-baby-carriage"></i></div>
                     <div>
                         <div class="font-bold text-lg text-indigo-900">14:00 午休保衛戰 (推車上)</div>
@@ -247,7 +258,9 @@
             </div>
             
             <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
-                <div class="timeline-line"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Nishiki_Market_kyoto.jpg/800px-Nishiki_Market_kyoto.jpg" alt="實際京都錦市場" class="w-full h-40 object-cover rounded-2xl mb-6 shadow-sm object-center">
+                
+                <div class="timeline-line mt-48"></div>
                 
                 <div class="relative z-10 flex gap-4 mb-6">
                     <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-suitcase-rolling"></i></div>
@@ -297,7 +310,9 @@
             </div>
             
             <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
-                <div class="timeline-line"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Kiyomizu-dera_in_Kyoto-HDR.jpg/800px-Kiyomizu-dera_in_Kyoto-HDR.jpg" alt="實際清水寺本堂" class="w-full h-40 object-cover rounded-2xl mb-6 shadow-sm object-center">
+                
+                <div class="timeline-line mt-48"></div>
                 
                 <div class="relative z-10 flex gap-4 mb-6">
                     <div class="bg-pink-100 text-pink-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-camera"></i></div>
@@ -317,7 +332,7 @@
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100">
+                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100 shadow-sm">
                     <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-moon"></i></div>
                     <div>
                         <div class="font-bold text-lg text-indigo-900">15:00 午休保衛戰 (回飯店)</div>
@@ -346,7 +361,9 @@
             </div>
             
             <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
-                <div class="timeline-line"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Gion_Shirakawa_Kyoto_Japan.jpg/800px-Gion_Shirakawa_Kyoto_Japan.jpg" alt="實際祇園白川美景" class="w-full h-40 object-cover rounded-2xl mb-6 shadow-sm object-center">
+                
+                <div class="timeline-line mt-48"></div>
                 
                 <div class="relative z-10 flex gap-4 mb-6">
                     <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-leaf"></i></div>
@@ -356,7 +373,7 @@
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100">
+                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100 shadow-sm">
                     <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-bed"></i></div>
                     <div>
                         <div class="font-bold text-lg text-indigo-900">14:30 午休保衛戰 (回飯店)</div>
@@ -364,7 +381,7 @@
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 bg-rose-50 p-4 rounded-2xl border-2 border-rose-200">
+                <div class="relative z-10 flex gap-4 bg-rose-50 p-4 rounded-2xl border-2 border-rose-200 shadow-md">
                     <div class="bg-rose-500 text-white w-12 h-12 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-crown"></i></div>
                     <div class="w-full">
                         <div class="font-bold text-xl text-rose-700">17:30 晚餐：しゃぶ禅 吃到飽！</div>
@@ -386,7 +403,9 @@
             </div>
             
             <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
-                <div class="timeline-line"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rinku_Town_Osaka_Japan15n.jpg/800px-Rinku_Town_Osaka_Japan15n.jpg" alt="實際臨空城照片" class="w-full h-40 object-cover rounded-2xl mb-6 shadow-sm object-center">
+                
+                <div class="timeline-line mt-48"></div>
                 
                 <div class="relative z-10 flex gap-4 mb-6">
                     <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-shopping-bag"></i></div>
@@ -428,7 +447,9 @@
             </div>
             
             <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
-                <div class="timeline-line"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Kansai_International_Airport_Terminal_1_Bldg_Departures_Floor_01.jpg/800px-Kansai_International_Airport_Terminal_1_Bldg_Departures_Floor_01.jpg" alt="實際關西國際機場航廈" class="w-full h-40 object-cover rounded-2xl mb-6 shadow-sm border border-slate-100 object-center">
+                
+                <div class="timeline-line mt-48"></div>
                 
                 <div class="relative z-10 flex gap-4 mb-6">
                     <div class="bg-yellow-100 text-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-mug-hot"></i></div>
@@ -459,9 +480,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center pb-8 pt-4 text-slate-400 text-sm">
+    <footer class="text-center pb-12 pt-4 text-slate-400 text-sm">
         <p>Created for Nick, Nina & Riyu ❤️ Have a wonderful trip!</p>
     </footer>
 
 </body>
 </html>
+
+
