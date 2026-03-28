@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尼克一家的關西耍廢吃貨之旅 ✈️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 1.25rem;
+            top: 2rem;
+            bottom: 0;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+        .nap-time {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f43f5e', // Rose
+                        secondary: '#3b82f6', // Blue
+                        accent: '#f59e0b', // Amber
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-slate-800 antialiased pb-20">
+
+    <!-- Header / Hero Section -->
+    <header class="bg-gradient-to-r from-rose-400 to-orange-300 text-white pt-16 pb-12 px-6 rounded-b-3xl shadow-lg relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+            <i class="fas fa-plane text-9xl"></i>
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-1 text-sm font-medium mb-4">
+                <i class="fas fa-calendar-alt mr-2"></i> 2026/04/28 - 05/05
+            </div>
+            <h1 class="text-4xl font-black mb-2 tracking-tight">尼克一家的關西耍廢遊</h1>
+            <p class="text-lg opacity-90 font-medium">睡飽、吃好、大口吃和牛 🥩🦀</p>
+            
+            <div class="mt-6 flex flex-wrap gap-2">
+                <span class="bg-white/20 px-3 py-1 rounded-full text-sm"><i class="fas fa-child mr-1"></i> 理悠 (3y) 午休保衛戰</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-sm"><i class="fas fa-taxi mr-1"></i> 能坐車絕不走路</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation (Sticky) -->
+    <nav class="glass-nav sticky top-0 z-50 shadow-sm border-b border-slate-100 overflow-x-auto whitespace-nowrap py-3 px-4 hide-scrollbar">
+        <div class="max-w-3xl mx-auto flex gap-2">
+            <a href="#d1" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D1</a>
+            <a href="#d2" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D2</a>
+            <a href="#d3" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D3</a>
+            <a href="#d4" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D4</a>
+            <a href="#d5" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D5</a>
+            <a href="#d6" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D6</a>
+            <a href="#d7" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D7</a>
+            <a href="#d8" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D8</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-4 mt-8 space-y-10">
+
+        <!-- D1 -->
+        <section id="d1" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D1</div>
+                <div>
+                    <h2 class="text-2xl font-bold">桃園 ➔ 大阪</h2>
+                    <p class="text-slate-500 text-sm">4/28 (週二) · 安頓與補給</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+                <div class="timeline-line"></div>
+                
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-plane"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">19:00 抵達關西機場</div>
+                        <p class="text-slate-600 text-sm mt-1">15:15 桃園起飛。落地後搭乘 20:05 的南海電鐵 Rapi:t 特急前往難波。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-yellow-100 text-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-taxi"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">20:45 轉乘計程車</div>
+                        <p class="text-slate-600 text-sm mt-1">抵達難波站後，直接攔計程車前往飯店，免去拖行李找路的痛苦。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-bed"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">21:05 入住難波公寓</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">コンチネンタル難波東 (Continental Namba Higashi)</p>
+                        <a href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 開啟地圖儲存</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4">
+                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-utensils"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">21:30 老爸外帶宵夜</div>
+                        <p class="text-slate-600 text-sm mt-1">尼娜帶理悠洗澡睡覺。老爸去新世界商圈外帶串炸/串燒與生啤酒，順便買明天的超商早餐。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D2 -->
+        <section id="d2" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D2</div>
+                <div>
+                    <h2 class="text-2xl font-bold">海遊館與黑門市場</h2>
+                    <p class="text-slate-500 text-sm">4/29 (週三) · 昭和之日 (假日)</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+                <div class="timeline-line"></div>
+                
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-sun"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">10:00 悠哉出門</div>
+                        <p class="text-slate-600 text-sm mt-1">飯店吃超商早餐，睡飽再出發。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-hamburger"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">11:00 午餐：鶴橋風月 大阪燒</div>
+                        <p class="text-slate-600 text-sm mt-1">天保山市場街內。一營業就去吃，避開排隊人潮。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-fish"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">12:30 海遊館 & 摩天輪</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">室內推車友善，帶理悠看大鯨鯊。</p>
+                        <a href="https://maps.google.com/?cid=8035482904308493516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 海遊館地圖</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100">
+                    <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-moon"></i></div>
+                    <div>
+                        <div class="font-bold text-lg text-indigo-900">14:30 午休保衛戰 (回飯店)</div>
+                        <p class="text-indigo-800 text-sm mt-1">搭計程車回難波公寓。理悠在床上舒服睡午覺，大人補眠。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4">
+                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-store"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">17:00 晚餐：黑門市場外帶派對</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">睡醒後走路 5 分鐘去黑門市場。買高檔生魚片、和牛熟食回公寓配 Netflix 吃！</p>
+                        <a href="https://maps.google.com/?cid=12402117845945925953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 黑門市場地圖</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D3 -->
+        <section id="d3" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D3</div>
+                <div>
+                    <h2 class="text-2xl font-bold">勇闖環球影城</h2>
+                    <p class="text-slate-500 text-sm">4/30 (週四) · USJ 體力戰</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+                <div class="timeline-line"></div>
+                
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-magic"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">10:00 環球影城入園</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2"><span class="font-bold text-rose-500">入園第一件事：租嬰兒推車！</span> 直攻「環球奇境」幼兒區。</p>
+                        <a href="https://maps.google.com/?cid=3892796888607511210&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> USJ 地圖</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-utensils"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">12:00 午餐：史努比快餐店</div>
+                        <p class="text-slate-600 text-sm mt-1">吃可愛的兒童餐，休息一下。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100">
+                    <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-baby-carriage"></i></div>
+                    <div>
+                        <div class="font-bold text-lg text-indigo-900">14:00 午休保衛戰 (推車上)</div>
+                        <p class="text-indigo-800 text-sm mt-1">理悠在推車上睡覺。爸媽找咖啡廳放空，或輪流去玩大人的設施。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4">
+                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-bowl-food"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">18:00 晚餐：CityWalk 吃肉吃麵</div>
+                        <p class="text-slate-600 text-sm mt-1">出園後在 Universal CityWalk 找拉麵（神座/一蘭）或大口吃牛排，吃飽搭車回飯店。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D4 -->
+        <section id="d4" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D4</div>
+                <div>
+                    <h2 class="text-2xl font-bold">大阪 ➔ 京都</h2>
+                    <p class="text-slate-500 text-sm">5/01 (週五) · 移動與散策</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+                <div class="timeline-line"></div>
+                
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-suitcase-rolling"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">10:00 退房前往京都</div>
+                        <p class="text-slate-600 text-sm mt-1">強烈建議將大件行李寄宅急便至京都。搭計程車轉火車，讓理悠在車上睡午覺。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-bed"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">14:00 入住祇園飯店</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">&zen Kyoto Gion (&zen.京都祇園)</p>
+                        <a href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 開啟地圖儲存</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-fish"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">15:00 錦市場 & 河原町</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">吃生魚片串、玉子燒。接著逛迪士尼商店、喝藍瓶咖啡。</p>
+                        <a href="https://maps.google.com/?cid=13159134450370243740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition mr-2 mb-2 sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 錦市場</a>
+                        <a href="https://maps.google.com/?cid=15992785868951527968&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-coffee text-rose-500"></i> 藍瓶咖啡</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4">
+                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-bowl-food"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">18:30 晚餐：河原町吃拉麵</div>
+                        <p class="text-slate-600 text-sm mt-1">找一間免排隊太久的拉麵店（如麵匠一粒萬倍），吃飽散步回飯店。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D5 -->
+        <section id="d5" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D5</div>
+                <div>
+                    <h2 class="text-2xl font-bold">和服與極品炸豬排</h2>
+                    <p class="text-slate-500 text-sm">5/02 (週六) · 拍照與美食日</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+                <div class="timeline-line"></div>
+                
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-pink-100 text-pink-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-camera"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">10:00 換和服 ➔ 清水寺</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">搭計程車直上清水寺門口拍照，避開斜坡爬階梯。</p>
+                        <a href="https://maps.google.com/?cid=7111013964196361402&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 清水寺地圖</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-piggy-bank"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">13:00 午餐：空蟬亭炸豬排</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2 font-bold text-rose-500">⚠️ 此趟大重點！必須提前官網預約！</p>
+                        <a href="https://maps.google.com/?cid=5614739330656938348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 空蟬亭地圖</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100">
+                    <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-moon"></i></div>
+                    <div>
+                        <div class="font-bold text-lg text-indigo-900">15:00 午休保衛戰 (回飯店)</div>
+                        <p class="text-indigo-800 text-sm mt-1">吃飽搭計程車回飯店脫和服。穿和服很累，全家務必睡午覺 1.5 小時。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4">
+                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-fire"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">17:30 晚餐：祇園串燒</div>
+                        <p class="text-slate-600 text-sm mt-1">睡飽後在飯店周邊找一間居酒屋大啖串烤。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D6 -->
+        <section id="d6" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D6</div>
+                <div>
+                    <h2 class="text-2xl font-bold">和牛螃蟹吃到飽</h2>
+                    <p class="text-slate-500 text-sm">5/03 (週日) · 祇園慢活與大餐</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+                <div class="timeline-line"></div>
+                
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-leaf"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">10:00 祇園白川散策</div>
+                        <p class="text-slate-600 text-sm mt-1">飯店旁風景絕美，不用趕行程，輕鬆拍照漫步。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100">
+                    <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-bed"></i></div>
+                    <div>
+                        <div class="font-bold text-lg text-indigo-900">14:30 午休保衛戰 (回飯店)</div>
+                        <p class="text-indigo-800 text-sm mt-1">回飯店充電，為了晚上的吃到飽大餐養精蓄銳！</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 bg-rose-50 p-4 rounded-2xl border-2 border-rose-200">
+                    <div class="bg-rose-500 text-white w-12 h-12 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-crown"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-xl text-rose-700">17:30 晚餐：しゃぶ禅 吃到飽！</div>
+                        <p class="text-rose-600 text-sm mt-1 mb-3">頂級黑毛和牛 + 鱈場蟹/松葉蟹吃到飽！從飯店散步就到。（⚠️ 黃金週務必提前訂位）</p>
+                        <a href="https://maps.google.com/?cid=10061453927687522259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto shadow-sm"><i class="fas fa-map-marker-alt"></i> しゃぶ禅 京都祇園店</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D7 -->
+        <section id="d7" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D7</div>
+                <div>
+                    <h2 class="text-2xl font-bold">京都 ➔ 臨空城</h2>
+                    <p class="text-slate-500 text-sm">5/04 (週一) · 最終爆買與別墅派對</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+                <div class="timeline-line"></div>
+                
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">11:00 臨空城 Outlet</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">從京都退房抵達。午餐在美食街解決，大人逛街，理悠在推車上睡午覺。</p>
+                        <a href="https://maps.google.com/?cid=14141131390446530690&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> Outlet 地圖</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-house-user"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">16:00 入住獨棟別墅</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">Stella Rinku。空間超大有洗衣機，大人開始打包戰利品。</p>
+                        <a href="https://maps.google.com/?cid=12491694104136309829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 別墅地圖</a>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4">
+                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="w-full">
+                        <div class="font-bold text-lg">18:00 超市爆買 & 派對</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">前往附近的 Trial 超市買便宜和牛、大草莓、生魚片，回別墅客廳自己煮，吃喝到飽！</p>
+                        <a href="https://maps.google.com/?cid=13303253818827808352&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> Trial 大型超市</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D8 -->
+        <section id="d8" class="scroll-mt-24 mb-10">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D8</div>
+                <div>
+                    <h2 class="text-2xl font-bold">滿載而歸 ➔ 桃園</h2>
+                    <p class="text-slate-500 text-sm">5/05 (週二) · 回家囉</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+                <div class="timeline-line"></div>
+                
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-yellow-100 text-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-mug-hot"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">09:30 悠哉早餐</div>
+                        <p class="text-slate-600 text-sm mt-1">把昨晚超市買的豐盛食材當早餐清空。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4 mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-taxi"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">10:00 出發前往機場</div>
+                        <p class="text-slate-600 text-sm mt-1">搭計程車，只需 6 分鐘即可抵達關西機場 (KIX)。</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 flex gap-4">
+                    <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-plane-arrival"></i></div>
+                    <div>
+                        <div class="font-bold text-lg">14:15 抵達台灣</div>
+                        <p class="text-slate-600 text-sm mt-1">12:20 航班起飛，帶著滿滿的回憶降落桃園機場！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center pb-8 pt-4 text-slate-400 text-sm">
+        <p>Created for Nick, Nina & Riyu ❤️ Have a wonderful trip!</p>
+    </footer>
+
+</body>
+</html>
