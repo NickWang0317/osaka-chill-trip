@@ -66,6 +66,7 @@
         display: flex;
         align-items: center;
         -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
         scrollbar-width: none;
       }
       .glass-nav::-webkit-scrollbar {
@@ -79,6 +80,9 @@
         flex-shrink: 0;
         display: inline-flex;
         align-items: center;
+      }
+      .inline-flex {
+        white-space: nowrap;
       }
       .glass-nav a.active {
         background-color: rgba(251, 191, 36, 0.18);
@@ -185,10 +189,10 @@
         <h1
           class="text-3xl sm:text-5xl font-black mb-3 tracking-tight drop-shadow-md leading-tight"
         >
-          尼克一家的關西耍廢遊
+          尼克一家的關西耍廢吃貨之旅
         </h1>
         <p class="header-subtitle text-base sm:text-lg font-medium mb-5">
-          睡飽好玩、輕鬆吃吃喝喝，手機閱讀更清爽。
+          睡飽好玩、輕鬆吃吃喝喝，手機閱讀更清爽，行程一目了然。
         </p>
 
         <div
@@ -196,7 +200,7 @@
         >
           <span
             class="pill-badge inline-flex items-center gap-2 px-3 py-2 rounded-full text-xs sm:text-sm font-medium"
-            ><i class="fas fa-child"></i> 理悠 (3y) 午休保衛戰</span
+            ><i class="fas fa-child"></i> 理悠（3 歲）午休保衛戰</span
           >
           <span
             class="pill-badge inline-flex items-center gap-2 px-3 py-2 rounded-full text-xs sm:text-sm font-medium"
@@ -393,7 +397,7 @@
               <div
                 class="text-xs font-bold text-white bg-blue-500 px-2 py-0.5 rounded-full inline-block mb-1 tracking-wider uppercase"
               >
-                VIP GUEST
+                VIP 貴賓
               </div>
               <div class="text-lg sm:text-xl font-black text-blue-900">
                 Jack 叔叔同行！
@@ -525,7 +529,7 @@
                 <a
                   href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
+                  class="inline-flex items-center gap-1 whitespace-nowrap text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
                   ><i class="fas fa-location-arrow text-blue-500"></i> 導航</a
                 >
               </div>
@@ -661,7 +665,7 @@
                 <a
                   href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
+                  class="inline-flex items-center gap-1 whitespace-nowrap text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
                   ><i class="fas fa-location-arrow text-blue-500"></i> 導航</a
                 >
               </div>
@@ -922,7 +926,7 @@
                 <a
                   href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
+                  class="inline-flex items-center gap-1 whitespace-nowrap text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
                   ><i class="fas fa-location-arrow text-blue-500"></i> 導航</a
                 >
               </div>
@@ -1047,7 +1051,7 @@
                 <a
                   href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
+                  class="inline-flex items-center gap-1 whitespace-nowrap text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
                   ><i class="fas fa-location-arrow text-blue-500"></i> 導航</a
                 >
               </div>
