@@ -69,24 +69,28 @@
 </head>
 <body class="text-slate-800 antialiased pb-20">
 
-    <!-- Banner 圖片 (獨立區塊) -->
-    <div class="max-w-3xl mx-auto sm:px-4 sm:pt-4">
-        <img src="images/hero-bg.jpg" alt="尼克一家關西遊Banner" class="w-full h-48 sm:h-72 object-cover sm:rounded-t-3xl shadow-sm bg-slate-200">
+    <!-- 專為直版照片設計的拍立得相框區塊 -->
+    <div class="max-w-3xl mx-auto flex justify-center pt-8 sm:pt-12 relative z-20 -mb-12 sm:-mb-16">
+        <div class="bg-white p-2.5 sm:p-3 rounded-2xl shadow-xl transform -rotate-2 hover:rotate-0 transition duration-300 border border-slate-100">
+            <!-- 這裡放你的直版全家福 -->
+            <img src="images/hero-bg.jpg" alt="尼克一家全家福" class="w-48 h-64 sm:w-60 sm:h-80 object-cover rounded-xl bg-slate-100">
+            <div class="absolute -bottom-5 -right-5 text-5xl sm:text-6xl drop-shadow-md transform rotate-12">✈️</div>
+        </div>
     </div>
 
     <!-- Header 標題區塊 -->
-    <header class="bg-gradient-to-r from-rose-400 to-orange-400 text-white pt-8 pb-10 px-6 sm:mx-4 sm:rounded-b-3xl rounded-b-3xl shadow-lg relative overflow-hidden max-w-3xl sm:mx-auto">
+    <header class="bg-gradient-to-r from-rose-400 to-orange-400 text-white pt-20 sm:pt-24 pb-10 px-6 sm:mx-4 sm:rounded-3xl rounded-b-3xl shadow-lg relative overflow-hidden max-w-3xl sm:mx-auto mt-2">
         <div class="absolute top-0 right-0 opacity-20 transform translate-x-10 -translate-y-10">
             <i class="fas fa-plane text-9xl"></i>
         </div>
-        <div class="relative z-10 max-w-3xl mx-auto">
+        <div class="relative z-10 max-w-3xl mx-auto text-center sm:text-left">
             <div class="inline-block bg-white/30 backdrop-blur-md rounded-full px-4 py-1 text-sm font-medium mb-4 shadow-sm">
                 <i class="fas fa-calendar-alt mr-2"></i> 2026/04/28 - 05/05
             </div>
             <h1 class="text-4xl sm:text-5xl font-black mb-3 tracking-tight drop-shadow-md">尼克一家的關西耍廢遊</h1>
             <p class="text-lg sm:text-xl opacity-95 font-medium drop-shadow">睡飽、吃好、大口吃和牛 🥩🦀</p>
             
-            <div class="mt-6 flex flex-wrap gap-2">
+            <div class="mt-6 flex flex-wrap justify-center sm:justify-start gap-2">
                 <span class="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium border border-white/30"><i class="fas fa-child mr-1"></i> 理悠 (3y) 午休保衛戰</span>
                 <span class="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium border border-white/30"><i class="fas fa-taxi mr-1"></i> 能坐車絕不走路</span>
             </div>
@@ -144,9 +148,21 @@
                     <div class="w-full">
                         <div class="font-bold text-lg">21:05 入住難波公寓</div>
                         <p class="text-slate-600 text-sm mt-1 mb-2">コンチネンタル難波東</p>
-                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-2 mb-2">
-                            <iframe src="https://maps.google.com/maps?q=コンチネンタル難波東&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                        <!-- Rich Map Card -->
+                        <div class="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 mt-3 mb-3 bg-white">
+                            <div class="h-24 sm:h-28 w-full relative">
+                                <img src="images/cover-namba.jpg" alt="コンチネンタル難波東" class="w-full h-full object-cover bg-slate-200">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div class="absolute bottom-2 left-3 text-white">
+                                    <div class="text-sm font-bold flex items-center gap-1"><i class="fas fa-map-marker-alt text-rose-400"></i> コンチネンタル難波東</div>
+                                </div>
+                            </div>
+                            <div class="h-32 w-full">
+                                <iframe src="https://maps.google.com/maps?q=コンチネンタル難波東&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
+
                         <a href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-rose-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
@@ -165,9 +181,24 @@
         <section id="d2" class="scroll-mt-24">
             <div class="flex items-center gap-3 mb-4">
                 <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">D2</div>
-                <div>
-                    <h2 class="text-2xl font-bold">海遊館與黑門市場</h2>
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold flex items-center flex-wrap gap-2">
+                        海遊館與黑門市場
+                        <span class="inline-flex items-center gap-1 bg-blue-100 text-blue-700 text-sm px-2.5 py-0.5 rounded-lg border border-blue-200"><i class="fas fa-user-friends"></i> Jack叔叔同行</span>
+                    </h2>
                     <p class="text-slate-500 text-sm">4/29 (週三) · 昭和之日 (假日)</p>
+                </div>
+            </div>
+
+            <!-- Jack叔叔專屬大頭貼卡片 -->
+            <div class="max-w-3xl mx-auto mb-6 ml-1 sm:ml-2">
+                <div class="inline-flex items-center gap-3 bg-blue-50/90 backdrop-blur-sm p-2 pr-5 rounded-full border border-blue-100 shadow-sm">
+                    <!-- 請在 images 資料夾放入 jack.jpg (建議正方形) -->
+                    <img src="images/jack.jpg" alt="Jack叔叔" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm bg-blue-200">
+                    <div>
+                        <div class="text-sm font-bold text-blue-800">特別嘉賓：Jack 叔叔</div>
+                        <div class="text-xs text-blue-600 font-medium">今天負責陪玩與提戰利品 💪</div>
+                    </div>
                 </div>
             </div>
             
@@ -178,7 +209,7 @@
                     <img src="images/d2-lunch.jpg" alt="大阪燒" class="thumb-img shrink-0">
                     <div class="pt-1">
                         <div class="font-bold text-lg">11:00 午餐：風月大阪燒</div>
-                        <p class="text-slate-600 text-sm mt-1">飯店吃完早餐後，前往天保山市場街。一營業就去吃避開人潮。</p>
+                        <p class="text-slate-600 text-sm mt-1">飯店吃完早餐後，<span class="font-medium text-blue-600">和 Jack 叔叔會合</span>前往天保山市場街。人多剛好可以多點幾種口味，一營業就去吃避開人潮。</p>
                     </div>
                 </div>
 
@@ -186,10 +217,23 @@
                     <img src="images/d2-aquarium.jpg" alt="海遊館" class="thumb-img shrink-0">
                     <div class="pt-1 w-full">
                         <div class="font-bold text-lg">12:30 景點：海遊館</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">室內推車友善，帶理悠看大鯨鯊。</p>
-                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-2 mb-2">
-                            <iframe src="https://maps.google.com/maps?q=海遊館&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">室內推車友善，<span class="font-medium text-blue-600">跟 Jack 叔叔一起帶理悠看大鯨鯊</span>，多個幫手顧小孩超輕鬆！</p>
+                        
+                        <!-- Rich Map Card -->
+                        <div class="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 mt-3 mb-3 bg-white">
+                            <div class="h-24 sm:h-28 w-full relative">
+                                <img src="images/cover-kaiyukan.jpg" alt="海遊館" class="w-full h-full object-cover bg-slate-200">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div class="absolute bottom-2 left-3 text-white">
+                                    <div class="text-sm font-bold flex items-center gap-1"><i class="fas fa-map-marker-alt text-rose-400"></i> 海遊館 (Osaka Aquarium)</div>
+                                    <div class="text-xs opacity-90 flex items-center gap-1"><i class="fas fa-star text-yellow-400"></i> 4.5</div>
+                                </div>
+                            </div>
+                            <div class="h-32 w-full">
+                                <iframe src="https://maps.google.com/maps?q=海遊館&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
+
                         <a href="https://maps.google.com/?cid=8035482904308493516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-rose-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
@@ -206,7 +250,7 @@
                     <img src="images/d2-dinner.jpg" alt="生魚片" class="thumb-img shrink-0">
                     <div class="pt-1 w-full">
                         <div class="font-bold text-lg">17:00 晚餐：黑門市場外帶</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">買高檔生魚片、和牛熟食回公寓配 Netflix 吃！</p>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">跟 Jack 叔叔一起逛黑門市場，買高檔生魚片、和牛熟食回公寓配 Netflix 吃！</p>
                         <a href="https://maps.google.com/?cid=12402117845945925953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
@@ -231,9 +275,22 @@
                     <div class="pt-1 w-full">
                         <div class="font-bold text-lg">10:00 環球影城入園</div>
                         <p class="text-slate-600 text-sm mt-1 mb-2"><span class="font-bold text-rose-500">入園先租嬰兒推車！</span> 直攻「環球奇境」幼兒區。</p>
-                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-2 mb-2">
-                            <iframe src="https://maps.google.com/maps?q=日本環球影城&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                        <!-- Rich Map Card -->
+                        <div class="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 mt-3 mb-3 bg-white">
+                            <div class="h-24 sm:h-28 w-full relative">
+                                <img src="images/cover-usj.jpg" alt="日本環球影城" class="w-full h-full object-cover bg-slate-200">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div class="absolute bottom-2 left-3 text-white">
+                                    <div class="text-sm font-bold flex items-center gap-1"><i class="fas fa-map-marker-alt text-rose-400"></i> 日本環球影城 (USJ)</div>
+                                    <div class="text-xs opacity-90 flex items-center gap-1"><i class="fas fa-star text-yellow-400"></i> 4.6</div>
+                                </div>
+                            </div>
+                            <div class="h-32 w-full">
+                                <iframe src="https://maps.google.com/maps?q=日本環球影城&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
+
                         <a href="https://maps.google.com/?cid=3892796888607511210&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-rose-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
@@ -282,10 +339,22 @@
                     <div class="pt-1 w-full">
                         <div class="font-bold text-lg">10:00 退房前往京都</div>
                         <p class="text-slate-600 text-sm mt-1">行李寄宅急便。讓理悠在火車上順便睡午覺。</p>
-                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-3 mb-2">
-                            <iframe src="https://maps.google.com/maps?q=京都市東山区新門前通大和大路東入三丁目梅本町250&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                        <!-- Rich Map Card -->
+                        <div class="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 mt-3 mb-3 bg-white">
+                            <div class="h-24 sm:h-28 w-full relative">
+                                <img src="images/cover-zen.jpg" alt="&zen Kyoto Gion" class="w-full h-full object-cover bg-slate-200">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div class="absolute bottom-2 left-3 text-white">
+                                    <div class="text-sm font-bold flex items-center gap-1"><i class="fas fa-map-marker-alt text-rose-400"></i> &zen Kyoto Gion</div>
+                                </div>
+                            </div>
+                            <div class="h-32 w-full">
+                                <iframe src="https://maps.google.com/maps?q=京都市東山区新門前通大和大路東入三丁目梅本町250&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
-                        <a href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex mt-2 items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-indigo-500"></i> 入住 &zen 飯店</a>
+
+                        <a href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex mt-2 items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-indigo-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
 
@@ -391,9 +460,22 @@
                     <div class="pt-1 w-full">
                         <div class="font-bold text-xl text-rose-700">17:30 晚餐：しゃぶ禅</div>
                         <p class="text-rose-600 text-sm mt-1 mb-2 font-medium">頂級和牛 + 鱈場蟹吃到飽！</p>
-                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-rose-200 mt-2 mb-2">
-                            <iframe src="https://maps.google.com/maps?q=しゃぶ禅+京都祇園店&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                        <!-- Rich Map Card -->
+                        <div class="w-full rounded-xl overflow-hidden shadow-sm border border-rose-200 mt-3 mb-3 bg-white">
+                            <div class="h-24 sm:h-28 w-full relative">
+                                <img src="images/cover-shabuzen.jpg" alt="しゃぶ禅 京都祇園店" class="w-full h-full object-cover bg-rose-100">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div class="absolute bottom-2 left-3 text-white">
+                                    <div class="text-sm font-bold flex items-center gap-1"><i class="fas fa-map-marker-alt text-rose-400"></i> しゃぶ禅 京都祇園店</div>
+                                    <div class="text-xs opacity-90 flex items-center gap-1"><i class="fas fa-star text-yellow-400"></i> 4.2</div>
+                                </div>
+                            </div>
+                            <div class="h-32 w-full">
+                                <iframe src="https://maps.google.com/maps?q=しゃぶ禅+京都祇園店&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
+
                         <a href="https://maps.google.com/?cid=10061453927687522259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs px-3 py-1.5 rounded-lg transition shadow-sm"><i class="fas fa-external-link-alt"></i> 開啟地圖 App</a>
                     </div>
                 </div>
@@ -427,9 +509,21 @@
                     <div class="w-full">
                         <div class="font-bold text-lg">16:00 入住獨棟別墅</div>
                         <p class="text-slate-600 text-sm mt-1 mb-2">Stella Rinku。開始打包戰利品。</p>
-                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-2 mb-2">
-                            <iframe src="https://maps.google.com/maps?q=大阪府泉佐野市松原2丁目3-21&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                        <!-- Rich Map Card -->
+                        <div class="w-full rounded-xl overflow-hidden shadow-sm border border-slate-200 mt-3 mb-3 bg-white">
+                            <div class="h-24 sm:h-28 w-full relative">
+                                <img src="images/cover-stella.jpg" alt="Stella Rinku別墅" class="w-full h-full object-cover bg-slate-200">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div class="absolute bottom-2 left-3 text-white">
+                                    <div class="text-sm font-bold flex items-center gap-1"><i class="fas fa-map-marker-alt text-rose-400"></i> Stella Rinku 別墅</div>
+                                </div>
+                            </div>
+                            <div class="h-32 w-full">
+                                <iframe src="https://maps.google.com/maps?q=大阪府泉佐野市松原2丁目3-21&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
+
                         <a href="https://maps.google.com/?cid=12491694104136309829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-rose-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
@@ -488,7 +582,7 @@
 
     <!-- Footer -->
     <footer class="text-center pb-12 pt-4 text-slate-400 text-sm font-medium">
-        <p>Created for Nick, Nina & Riyu ❤️</p>
+        <p>Created for Nick, Nina, Riyu & Uncle Jack ❤️</p>
     </footer>
 
 </body>
