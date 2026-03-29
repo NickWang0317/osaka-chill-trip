@@ -30,12 +30,6 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
-        .hero-bg {
-            /* 這裡設定讀取 images 資料夾內的 hero-bg.jpg */
-            background-image: linear-gradient(to right, rgba(244, 63, 94, 0.85), rgba(253, 186, 116, 0.85)), url('images/hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-        }
         /* 縮圖樣式 */
         .thumb-img {
             width: 5rem;
@@ -75,8 +69,13 @@
 </head>
 <body class="text-slate-800 antialiased pb-20">
 
-    <!-- Header -->
-    <header class="hero-bg text-white pt-16 pb-12 px-6 rounded-b-3xl shadow-lg relative overflow-hidden">
+    <!-- Banner 圖片 (獨立區塊) -->
+    <div class="max-w-3xl mx-auto sm:px-4 sm:pt-4">
+        <img src="images/hero-bg.jpg" alt="尼克一家關西遊Banner" class="w-full h-48 sm:h-72 object-cover sm:rounded-t-3xl shadow-sm bg-slate-200">
+    </div>
+
+    <!-- Header 標題區塊 -->
+    <header class="bg-gradient-to-r from-rose-400 to-orange-400 text-white pt-8 pb-10 px-6 sm:mx-4 sm:rounded-b-3xl rounded-b-3xl shadow-lg relative overflow-hidden max-w-3xl sm:mx-auto">
         <div class="absolute top-0 right-0 opacity-20 transform translate-x-10 -translate-y-10">
             <i class="fas fa-plane text-9xl"></i>
         </div>
@@ -145,7 +144,10 @@
                     <div class="w-full">
                         <div class="font-bold text-lg">21:05 入住難波公寓</div>
                         <p class="text-slate-600 text-sm mt-1 mb-2">コンチネンタル難波東</p>
-                        <a href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
+                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-2 mb-2">
+                            <iframe src="https://maps.google.com/maps?q=コンチネンタル難波東&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-rose-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
 
@@ -185,7 +187,10 @@
                     <div class="pt-1 w-full">
                         <div class="font-bold text-lg">12:30 景點：海遊館</div>
                         <p class="text-slate-600 text-sm mt-1 mb-2">室內推車友善，帶理悠看大鯨鯊。</p>
-                        <a href="https://maps.google.com/?cid=8035482904308493516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
+                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-2 mb-2">
+                            <iframe src="https://maps.google.com/maps?q=海遊館&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?cid=8035482904308493516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-rose-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
 
@@ -226,7 +231,10 @@
                     <div class="pt-1 w-full">
                         <div class="font-bold text-lg">10:00 環球影城入園</div>
                         <p class="text-slate-600 text-sm mt-1 mb-2"><span class="font-bold text-rose-500">入園先租嬰兒推車！</span> 直攻「環球奇境」幼兒區。</p>
-                        <a href="https://maps.google.com/?cid=3892796888607511210&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
+                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-2 mb-2">
+                            <iframe src="https://maps.google.com/maps?q=日本環球影城&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?cid=3892796888607511210&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-rose-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
 
@@ -274,7 +282,10 @@
                     <div class="pt-1 w-full">
                         <div class="font-bold text-lg">10:00 退房前往京都</div>
                         <p class="text-slate-600 text-sm mt-1">行李寄宅急便。讓理悠在火車上順便睡午覺。</p>
-                        <a href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex mt-2 items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-bed text-indigo-500"></i> 入住 &zen 飯店</a>
+                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-3 mb-2">
+                            <iframe src="https://maps.google.com/maps?q=京都市東山区新門前通大和大路東入三丁目梅本町250&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex mt-2 items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-indigo-500"></i> 入住 &zen 飯店</a>
                     </div>
                 </div>
 
@@ -380,7 +391,10 @@
                     <div class="pt-1 w-full">
                         <div class="font-bold text-xl text-rose-700">17:30 晚餐：しゃぶ禅</div>
                         <p class="text-rose-600 text-sm mt-1 mb-2 font-medium">頂級和牛 + 鱈場蟹吃到飽！</p>
-                        <a href="https://maps.google.com/?cid=10061453927687522259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs px-3 py-1.5 rounded-lg transition shadow-sm"><i class="fas fa-map-marker-alt"></i> 地圖</a>
+                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-rose-200 mt-2 mb-2">
+                            <iframe src="https://maps.google.com/maps?q=しゃぶ禅+京都祇園店&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?cid=10061453927687522259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs px-3 py-1.5 rounded-lg transition shadow-sm"><i class="fas fa-external-link-alt"></i> 開啟地圖 App</a>
                     </div>
                 </div>
             </div>
@@ -413,7 +427,10 @@
                     <div class="w-full">
                         <div class="font-bold text-lg">16:00 入住獨棟別墅</div>
                         <p class="text-slate-600 text-sm mt-1 mb-2">Stella Rinku。開始打包戰利品。</p>
-                        <a href="https://maps.google.com/?cid=12491694104136309829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
+                        <div class="w-full h-40 rounded-xl overflow-hidden shadow-inner border border-slate-100 mt-2 mb-2">
+                            <iframe src="https://maps.google.com/maps?q=大阪府泉佐野市松原2丁目3-21&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?cid=12491694104136309829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-external-link-alt text-rose-500"></i> 開啟地圖 App</a>
                     </div>
                 </div>
 
