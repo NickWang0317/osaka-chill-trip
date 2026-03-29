@@ -15,7 +15,7 @@
         }
         .timeline-line {
             position: absolute;
-            left: 1.25rem;
+            left: 2.5rem;
             top: 2rem;
             bottom: 0;
             width: 2px;
@@ -31,45 +31,70 @@
             -webkit-backdrop-filter: blur(10px);
         }
         .hero-bg {
-            background: linear-gradient(135deg, #f43f5e 0%, #fb923c 100%);
+            /* 這裡設定讀取 images 資料夾內的 hero-bg.jpg */
+            background-image: linear-gradient(to right, rgba(244, 63, 94, 0.85), rgba(253, 186, 116, 0.85)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        /* 縮圖樣式 */
+        .thumb-img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 1rem;
+            object-fit: cover;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 3px solid white;
+            z-index: 10;
+            position: relative;
+            background-color: #f1f5f9; /* 圖片還沒載入時的底色 */
+        }
+        @media (min-width: 640px) {
+            .thumb-img {
+                width: 6rem;
+                height: 6rem;
+            }
+            .timeline-line { left: 3rem; }
+        }
+        /* 單純 icon 的外框 */
+        .icon-box {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid white;
+            z-index: 10;
+            position: relative;
+            margin-left: 1rem;
+        }
+        @media (min-width: 640px) {
+            .icon-box { margin-left: 1.5rem; }
         }
     </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#f43f5e',
-                        secondary: '#3b82f6',
-                        accent: '#f59e0b',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="text-slate-800 antialiased pb-20">
 
-    <!-- Header / Hero Section -->
+    <!-- Header -->
     <header class="hero-bg text-white pt-16 pb-12 px-6 rounded-b-3xl shadow-lg relative overflow-hidden">
-        <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+        <div class="absolute top-0 right-0 opacity-20 transform translate-x-10 -translate-y-10">
             <i class="fas fa-plane text-9xl"></i>
         </div>
         <div class="relative z-10 max-w-3xl mx-auto">
-            <div class="inline-block bg-white/20 backdrop-blur-md rounded-full px-4 py-1 text-sm font-medium mb-4 shadow-sm">
+            <div class="inline-block bg-white/30 backdrop-blur-md rounded-full px-4 py-1 text-sm font-medium mb-4 shadow-sm">
                 <i class="fas fa-calendar-alt mr-2"></i> 2026/04/28 - 05/05
             </div>
-            <h1 class="text-4xl sm:text-5xl font-black mb-3 tracking-tight drop-shadow-sm">尼克一家的關西耍廢遊</h1>
-            <p class="text-lg sm:text-xl opacity-95 font-medium">睡飽、吃好、大口吃和牛 🥩🦀</p>
+            <h1 class="text-4xl sm:text-5xl font-black mb-3 tracking-tight drop-shadow-md">尼克一家的關西耍廢遊</h1>
+            <p class="text-lg sm:text-xl opacity-95 font-medium drop-shadow">睡飽、吃好、大口吃和牛 🥩🦀</p>
             
             <div class="mt-6 flex flex-wrap gap-2">
-                <span class="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium border border-white/20"><i class="fas fa-child mr-1"></i> 理悠 (3y) 午休保衛戰</span>
-                <span class="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium border border-white/20"><i class="fas fa-taxi mr-1"></i> 能坐車絕不走路</span>
+                <span class="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium border border-white/30"><i class="fas fa-child mr-1"></i> 理悠 (3y) 午休保衛戰</span>
+                <span class="bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium border border-white/30"><i class="fas fa-taxi mr-1"></i> 能坐車絕不走路</span>
             </div>
         </div>
     </header>
 
-    <!-- Navigation (Sticky) -->
+    <!-- Navigation -->
     <nav class="glass-nav sticky top-0 z-50 shadow-sm border-b border-slate-100 overflow-x-auto whitespace-nowrap py-3 px-4 hide-scrollbar">
         <div class="max-w-3xl mx-auto flex gap-2">
             <a href="#d1" class="px-4 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-sm hover:bg-rose-100 hover:text-rose-600 transition">D1</a>
@@ -96,39 +121,39 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden">
                 <div class="timeline-line"></div>
                 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-plane"></i></div>
-                    <div>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d1-airplane.jpg" alt="飛機" class="thumb-img shrink-0">
+                    <div class="pt-1">
                         <div class="font-bold text-lg">19:00 抵達關西機場</div>
                         <p class="text-slate-600 text-sm mt-1">15:15 桃園起飛。落地後搭乘 20:05 的南海電鐵 Rapi:t 特急前往難波。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-yellow-100 text-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-taxi"></i></div>
+                <div class="relative z-10 flex gap-4 mb-8 items-center">
+                    <div class="icon-box bg-yellow-100 text-yellow-600 shrink-0"><i class="fas fa-taxi"></i></div>
                     <div>
                         <div class="font-bold text-lg">20:45 轉乘計程車</div>
-                        <p class="text-slate-600 text-sm mt-1">抵達難波站後，直接攔計程車前往飯店，免去拖行李找路的痛苦。</p>
+                        <p class="text-slate-600 text-sm">直達飯店，免去拖行李找路。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-bed"></i></div>
+                <div class="relative z-10 flex gap-4 mb-8 items-center">
+                    <div class="icon-box bg-indigo-100 text-indigo-600 shrink-0"><i class="fas fa-bed"></i></div>
                     <div class="w-full">
                         <div class="font-bold text-lg">21:05 入住難波公寓</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">コンチネンタル難波東 (Continental Namba Higashi)</p>
-                        <a href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 開啟地圖儲存</a>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">コンチネンタル難波東</p>
+                        <a href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4">
-                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-utensils"></i></div>
-                    <div>
-                        <div class="font-bold text-lg">21:30 老爸外帶宵夜</div>
-                        <p class="text-slate-600 text-sm mt-1">尼娜帶理悠洗澡睡覺。老爸去新世界商圈外帶串炸/串燒與生啤酒，順便買明天的超商早餐。</p>
+                <div class="relative z-10 flex gap-4 items-start">
+                    <img src="images/d1-dinner.jpg" alt="串燒宵夜" class="thumb-img shrink-0">
+                    <div class="pt-1">
+                        <div class="font-bold text-lg">21:30 晚餐：外帶串燒宵夜</div>
+                        <p class="text-slate-600 text-sm mt-1">理悠洗澡睡覺。老爸去新世界商圈外帶串炸與生啤酒，順便買超商早餐。</p>
                     </div>
                 </div>
             </div>
@@ -144,48 +169,40 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden">
                 <div class="timeline-line"></div>
                 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-sun"></i></div>
-                    <div>
-                        <div class="font-bold text-lg">10:00 悠哉出門</div>
-                        <p class="text-slate-600 text-sm mt-1">飯店吃超商早餐，睡飽再出發。</p>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d2-lunch.jpg" alt="大阪燒" class="thumb-img shrink-0">
+                    <div class="pt-1">
+                        <div class="font-bold text-lg">11:00 午餐：風月大阪燒</div>
+                        <p class="text-slate-600 text-sm mt-1">飯店吃完早餐後，前往天保山市場街。一營業就去吃避開人潮。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-hamburger"></i></div>
-                    <div>
-                        <div class="font-bold text-lg">11:00 午餐：鶴橋風月 大阪燒</div>
-                        <p class="text-slate-600 text-sm mt-1">天保山市場街內。一營業就去吃，避開排隊人潮。</p>
-                    </div>
-                </div>
-
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-fish"></i></div>
-                    <div class="w-full">
-                        <div class="font-bold text-lg">12:30 海遊館 & 摩天輪</div>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d2-aquarium.jpg" alt="海遊館" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
+                        <div class="font-bold text-lg">12:30 景點：海遊館</div>
                         <p class="text-slate-600 text-sm mt-1 mb-2">室內推車友善，帶理悠看大鯨鯊。</p>
-                        <a href="https://maps.google.com/?cid=8035482904308493516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 海遊館地圖</a>
+                        <a href="https://maps.google.com/?cid=8035482904308493516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100 shadow-sm">
-                    <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-moon"></i></div>
+                <div class="relative z-10 flex gap-4 mb-8 items-center nap-time p-3 rounded-2xl border border-indigo-100 ml-2">
+                    <div class="icon-box bg-indigo-500 text-white shrink-0 !ml-0 border-indigo-200"><i class="fas fa-moon"></i></div>
                     <div>
-                        <div class="font-bold text-lg text-indigo-900">14:30 午休保衛戰 (回飯店)</div>
-                        <p class="text-indigo-800 text-sm mt-1">搭計程車回難波公寓。理悠在床上舒服睡午覺，大人補眠。</p>
+                        <div class="font-bold text-lg text-indigo-900">14:30 回飯店睡午覺</div>
+                        <p class="text-indigo-800 text-sm">搭計程車回難波。理悠舒服躺平，大人補眠。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4">
-                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-store"></i></div>
-                    <div class="w-full">
-                        <div class="font-bold text-lg">17:00 晚餐：黑門市場外帶派對</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">睡醒後走路 5 分鐘去黑門市場。買高檔生魚片、和牛熟食回公寓配 Netflix 吃！</p>
-                        <a href="https://maps.google.com/?cid=12402117845945925953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 黑門市場地圖</a>
+                <div class="relative z-10 flex gap-4 items-start">
+                    <img src="images/d2-dinner.jpg" alt="生魚片" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
+                        <div class="font-bold text-lg">17:00 晚餐：黑門市場外帶</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">買高檔生魚片、和牛熟食回公寓配 Netflix 吃！</p>
+                        <a href="https://maps.google.com/?cid=12402117845945925953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
             </div>
@@ -201,39 +218,39 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden">
                 <div class="timeline-line"></div>
                 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-magic"></i></div>
-                    <div class="w-full">
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d3-usj.jpg" alt="遊樂園" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
                         <div class="font-bold text-lg">10:00 環球影城入園</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2"><span class="font-bold text-rose-500">入園第一件事：租嬰兒推車！</span> 直攻「環球奇境」幼兒區。</p>
-                        <a href="https://maps.google.com/?cid=3892796888607511210&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> USJ 地圖</a>
+                        <p class="text-slate-600 text-sm mt-1 mb-2"><span class="font-bold text-rose-500">入園先租嬰兒推車！</span> 直攻「環球奇境」幼兒區。</p>
+                        <a href="https://maps.google.com/?cid=3892796888607511210&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-utensils"></i></div>
-                    <div>
-                        <div class="font-bold text-lg">12:00 午餐：史努比快餐店</div>
-                        <p class="text-slate-600 text-sm mt-1">吃可愛的兒童餐，休息一下。</p>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d3-lunch.jpg" alt="可愛兒童餐" class="thumb-img shrink-0">
+                    <div class="pt-1">
+                        <div class="font-bold text-lg">12:00 午餐：造型速食</div>
+                        <p class="text-slate-600 text-sm mt-1">史努比快餐店吃可愛兒童餐休息。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100 shadow-sm">
-                    <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-baby-carriage"></i></div>
+                <div class="relative z-10 flex gap-4 mb-8 items-center nap-time p-3 rounded-2xl border border-indigo-100 ml-2">
+                    <div class="icon-box bg-indigo-500 text-white shrink-0 !ml-0 border-indigo-200"><i class="fas fa-baby-carriage"></i></div>
                     <div>
-                        <div class="font-bold text-lg text-indigo-900">14:00 午休保衛戰 (推車上)</div>
-                        <p class="text-indigo-800 text-sm mt-1">理悠在推車上睡覺。爸媽找咖啡廳放空，或輪流去玩大人的設施。</p>
+                        <div class="font-bold text-lg text-indigo-900">14:00 推車上睡午覺</div>
+                        <p class="text-indigo-800 text-sm">理悠推車上睡。爸媽去喝咖啡或輪流玩設施。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4">
-                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-bowl-food"></i></div>
-                    <div>
-                        <div class="font-bold text-lg">18:00 晚餐：CityWalk 吃肉吃麵</div>
-                        <p class="text-slate-600 text-sm mt-1">出園後在 Universal CityWalk 找拉麵（神座/一蘭）或大口吃牛排，吃飽搭車回飯店。</p>
+                <div class="relative z-10 flex gap-4 items-start">
+                    <img src="images/d3-dinner.jpg" alt="拉麵" class="thumb-img shrink-0">
+                    <div class="pt-1">
+                        <div class="font-bold text-lg">18:00 晚餐：大口吃肉麵</div>
+                        <p class="text-slate-600 text-sm mt-1">出園在 CityWalk 吃拉麵（神座/一蘭）或牛排。</p>
                     </div>
                 </div>
             </div>
@@ -249,41 +266,32 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden">
                 <div class="timeline-line"></div>
                 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-suitcase-rolling"></i></div>
-                    <div>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d4-kyoto.jpg" alt="京都" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
                         <div class="font-bold text-lg">10:00 退房前往京都</div>
-                        <p class="text-slate-600 text-sm mt-1">強烈建議將大件行李寄宅急便至京都。搭計程車轉火車，讓理悠在車上睡午覺。</p>
+                        <p class="text-slate-600 text-sm mt-1">行李寄宅急便。讓理悠在火車上順便睡午覺。</p>
+                        <a href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex mt-2 items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-bed text-indigo-500"></i> 入住 &zen 飯店</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-bed"></i></div>
-                    <div class="w-full">
-                        <div class="font-bold text-lg">14:00 入住祇園飯店</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">&zen Kyoto Gion (&zen.京都祇園)</p>
-                        <a href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 開啟地圖儲存</a>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d4-market.jpg" alt="市場小吃" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
+                        <div class="font-bold text-lg">15:00 午餐：錦市場小吃</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">吃生魚片串、玉子燒。接著逛河原町買東西。</p>
+                        <a href="https://maps.google.com/?cid=13159134450370243740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-fish"></i></div>
-                    <div class="w-full">
-                        <div class="font-bold text-lg">15:00 錦市場 & 河原町</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">吃生魚片串、玉子燒。接著逛迪士尼商店、喝藍瓶咖啡。</p>
-                        <a href="https://maps.google.com/?cid=13159134450370243740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition mr-2 mb-2 sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 錦市場</a>
-                        <a href="https://maps.google.com/?cid=15992785868951527968&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-coffee text-rose-500"></i> 藍瓶咖啡</a>
-                    </div>
-                </div>
-
-                <div class="relative z-10 flex gap-4">
-                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-bowl-food"></i></div>
-                    <div>
-                        <div class="font-bold text-lg">18:30 晚餐：河原町吃拉麵</div>
-                        <p class="text-slate-600 text-sm mt-1">找一間免排隊太久的拉麵店（如麵匠一粒萬倍），吃飽散步回飯店。</p>
+                <div class="relative z-10 flex gap-4 items-start">
+                    <img src="images/d4-dinner.jpg" alt="京都拉麵" class="thumb-img shrink-0">
+                    <div class="pt-1">
+                        <div class="font-bold text-lg">18:30 晚餐：河原町拉麵</div>
+                        <p class="text-slate-600 text-sm mt-1">找一間免排隊太久的拉麵店，吃飽散步回飯店。</p>
                     </div>
                 </div>
             </div>
@@ -299,38 +307,38 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden">
                 <div class="timeline-line"></div>
                 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-pink-100 text-pink-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-camera"></i></div>
-                    <div class="w-full">
-                        <div class="font-bold text-lg">10:00 換和服 ➔ 清水寺</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">搭計程車直上清水寺門口拍照，避開斜坡爬階梯。</p>
-                        <a href="https://maps.google.com/?cid=7111013964196361402&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 清水寺地圖</a>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d5-kiyomizu.jpg" alt="清水寺" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
+                        <div class="font-bold text-lg">10:00 景點：清水寺</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">換和服，搭計程車直上門口拍照，避開斜坡。</p>
+                        <a href="https://maps.google.com/?cid=7111013964196361402&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-piggy-bank"></i></div>
-                    <div class="w-full">
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d5-lunch.jpg" alt="炸豬排" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
                         <div class="font-bold text-lg">13:00 午餐：空蟬亭炸豬排</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2 font-bold text-rose-500">⚠️ 此趟大重點！必須提前官網預約！</p>
-                        <a href="https://maps.google.com/?cid=5614739330656938348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 空蟬亭地圖</a>
+                        <p class="text-slate-600 text-sm mt-1 mb-2 font-bold text-rose-500">⚠️ 此趟大重點！務必提前預約！</p>
+                        <a href="https://maps.google.com/?cid=5614739330656938348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100 shadow-sm">
-                    <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-moon"></i></div>
+                <div class="relative z-10 flex gap-4 mb-8 items-center nap-time p-3 rounded-2xl border border-indigo-100 ml-2">
+                    <div class="icon-box bg-indigo-500 text-white shrink-0 !ml-0 border-indigo-200"><i class="fas fa-moon"></i></div>
                     <div>
-                        <div class="font-bold text-lg text-indigo-900">15:00 午休保衛戰 (回飯店)</div>
-                        <p class="text-indigo-800 text-sm mt-1">吃飽搭計程車回飯店脫和服。穿和服很累，全家務必睡午覺 1.5 小時。</p>
+                        <div class="font-bold text-lg text-indigo-900">15:00 回飯店睡午覺</div>
+                        <p class="text-indigo-800 text-sm">穿和服很累，全家務必回房睡 1.5 小時。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4">
-                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-fire"></i></div>
-                    <div>
+                <div class="relative z-10 flex gap-4 items-start">
+                    <img src="images/d5-dinner.jpg" alt="居酒屋" class="thumb-img shrink-0">
+                    <div class="pt-1">
                         <div class="font-bold text-lg">17:30 晚餐：祇園串燒</div>
                         <p class="text-slate-600 text-sm mt-1">睡飽後在飯店周邊找一間居酒屋大啖串烤。</p>
                     </div>
@@ -348,31 +356,31 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden">
                 <div class="timeline-line"></div>
                 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-leaf"></i></div>
-                    <div>
-                        <div class="font-bold text-lg">10:00 祇園白川散策</div>
-                        <p class="text-slate-600 text-sm mt-1">飯店旁風景絕美，不用趕行程，輕鬆拍照漫步。</p>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d6-gion.jpg" alt="祇園白川" class="thumb-img shrink-0">
+                    <div class="pt-1">
+                        <div class="font-bold text-lg">10:00 景點：祇園白川</div>
+                        <p class="text-slate-600 text-sm mt-1">飯店旁風景絕美，不趕行程輕鬆拍照。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6 p-3 rounded-2xl nap-time border border-indigo-100 shadow-sm">
-                    <div class="bg-indigo-500 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-indigo-100"><i class="fas fa-bed"></i></div>
+                <div class="relative z-10 flex gap-4 mb-8 items-center nap-time p-3 rounded-2xl border border-indigo-100 ml-2">
+                    <div class="icon-box bg-indigo-500 text-white shrink-0 !ml-0 border-indigo-200"><i class="fas fa-bed"></i></div>
                     <div>
-                        <div class="font-bold text-lg text-indigo-900">14:30 午休保衛戰 (回飯店)</div>
-                        <p class="text-indigo-800 text-sm mt-1">回飯店充電，為了晚上的吃到飽大餐養精蓄銳！</p>
+                        <div class="font-bold text-lg text-indigo-900">14:30 回飯店睡午覺</div>
+                        <p class="text-indigo-800 text-sm">回飯店充電，為了晚上的吃到飽養精蓄銳！</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 bg-rose-50 p-4 rounded-2xl border-2 border-rose-200 shadow-md">
-                    <div class="bg-rose-500 text-white w-12 h-12 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-crown"></i></div>
-                    <div class="w-full">
-                        <div class="font-bold text-xl text-rose-700">17:30 晚餐：しゃぶ禅 吃到飽！</div>
-                        <p class="text-rose-600 text-sm mt-1 mb-3">頂級黑毛和牛 + 鱈場蟹/松葉蟹吃到飽！從飯店散步就到。（⚠️ 黃金週務必提前訂位）</p>
-                        <a href="https://maps.google.com/?cid=10061453927687522259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto shadow-sm"><i class="fas fa-map-marker-alt"></i> しゃぶ禅 京都祇園店</a>
+                <div class="relative z-10 flex gap-4 items-start bg-rose-50 p-4 rounded-2xl border border-rose-200">
+                    <img src="images/d6-dinner.jpg" alt="和牛火鍋" class="thumb-img shrink-0 border-rose-300">
+                    <div class="pt-1 w-full">
+                        <div class="font-bold text-xl text-rose-700">17:30 晚餐：しゃぶ禅</div>
+                        <p class="text-rose-600 text-sm mt-1 mb-2 font-medium">頂級和牛 + 鱈場蟹吃到飽！</p>
+                        <a href="https://maps.google.com/?cid=10061453927687522259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs px-3 py-1.5 rounded-lg transition shadow-sm"><i class="fas fa-map-marker-alt"></i> 地圖</a>
                     </div>
                 </div>
             </div>
@@ -388,33 +396,33 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden">
                 <div class="timeline-line"></div>
                 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-shopping-bag"></i></div>
-                    <div class="w-full">
-                        <div class="font-bold text-lg">11:00 臨空城 Outlet</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">從京都退房抵達。午餐在美食街解決，大人逛街，理悠在推車上睡午覺。</p>
-                        <a href="https://maps.google.com/?cid=14141131390446530690&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> Outlet 地圖</a>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d7-outlet.jpg" alt="Outlet" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
+                        <div class="font-bold text-lg">11:00 景點：臨空城 Outlet</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">午餐在美食街解決，理悠在推車睡午覺。</p>
+                        <a href="https://maps.google.com/?cid=14141131390446530690&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-house-user"></i></div>
+                <div class="relative z-10 flex gap-4 mb-8 items-center">
+                    <div class="icon-box bg-indigo-100 text-indigo-600 shrink-0"><i class="fas fa-house-user"></i></div>
                     <div class="w-full">
                         <div class="font-bold text-lg">16:00 入住獨棟別墅</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">Stella Rinku。空間超大有洗衣機，大人開始打包戰利品。</p>
-                        <a href="https://maps.google.com/?cid=12491694104136309829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> 別墅地圖</a>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">Stella Rinku。開始打包戰利品。</p>
+                        <a href="https://maps.google.com/?cid=12491694104136309829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4">
-                    <div class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-shopping-cart"></i></div>
-                    <div class="w-full">
-                        <div class="font-bold text-lg">18:00 超市爆買 & 派對</div>
-                        <p class="text-slate-600 text-sm mt-1 mb-2">前往附近的 Trial 超市買便宜和牛、大草莓、生魚片，回別墅客廳自己煮，吃喝到飽！</p>
-                        <a href="https://maps.google.com/?cid=13303253818827808352&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-4 py-2 rounded-xl transition w-full sm:w-auto"><i class="fas fa-map-marker-alt text-rose-500"></i> Trial 大型超市</a>
+                <div class="relative z-10 flex gap-4 items-start">
+                    <img src="images/d7-dinner.jpg" alt="和牛" class="thumb-img shrink-0">
+                    <div class="pt-1 w-full">
+                        <div class="font-bold text-lg">18:00 晚餐：超市爆買派對</div>
+                        <p class="text-slate-600 text-sm mt-1 mb-2">Trial 超市買便宜和牛、草莓，回別墅自己煮！</p>
+                        <a href="https://maps.google.com/?cid=13303253818827808352&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a>
                     </div>
                 </div>
             </div>
@@ -430,30 +438,30 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-5 relative">
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden">
                 <div class="timeline-line"></div>
                 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-yellow-100 text-yellow-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-mug-hot"></i></div>
-                    <div>
-                        <div class="font-bold text-lg">09:30 悠哉早餐</div>
+                <div class="relative z-10 flex gap-4 mb-8 items-start">
+                    <img src="images/d8-breakfast.jpg" alt="豐盛早餐" class="thumb-img shrink-0">
+                    <div class="pt-1">
+                        <div class="font-bold text-lg">09:30 早餐：悠哉清冰箱</div>
                         <p class="text-slate-600 text-sm mt-1">把昨晚超市買的豐盛食材當早餐清空。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4 mb-6">
-                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-taxi"></i></div>
+                <div class="relative z-10 flex gap-4 mb-8 items-center">
+                    <div class="icon-box bg-blue-100 text-blue-600 shrink-0"><i class="fas fa-taxi"></i></div>
                     <div>
                         <div class="font-bold text-lg">10:00 出發前往機場</div>
-                        <p class="text-slate-600 text-sm mt-1">搭計程車，只需 6 分鐘即可抵達關西機場 (KIX)。</p>
+                        <p class="text-slate-600 text-sm">搭計程車只需 6 分鐘即可抵達關西機場。</p>
                     </div>
                 </div>
 
-                <div class="relative z-10 flex gap-4">
-                    <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center shrink-0 border-4 border-white"><i class="fas fa-plane-arrival"></i></div>
+                <div class="relative z-10 flex gap-4 items-center">
+                    <div class="icon-box bg-green-100 text-green-600 shrink-0"><i class="fas fa-plane-arrival"></i></div>
                     <div>
                         <div class="font-bold text-lg">14:15 抵達台灣</div>
-                        <p class="text-slate-600 text-sm mt-1">12:20 航班起飛，帶著滿滿的回憶降落桃園機場！</p>
+                        <p class="text-slate-600 text-sm">12:20 航班起飛，帶著滿滿回憶降落桃園！</p>
                     </div>
                 </div>
             </div>
@@ -462,11 +470,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center pb-12 pt-4 text-slate-400 text-sm">
-        <p>Created for Nick, Nina & Riyu ❤️ Have a wonderful trip!</p>
+    <footer class="text-center pb-12 pt-4 text-slate-400 text-sm font-medium">
+        <p>Created for Nick, Nina & Riyu ❤️</p>
     </footer>
 
 </body>
 </html>
-
-
