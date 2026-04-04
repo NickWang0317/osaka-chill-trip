@@ -215,9 +215,9 @@
     <div class="max-w-3xl mx-auto px-4 flex justify-between items-center -mt-2 mb-6 relative z-10">
       <div class="bg-slate-200/60 backdrop-blur-sm border border-slate-300/50 text-slate-600 text-[10px] sm:text-xs px-3 py-1.5 rounded-full font-mono flex items-center gap-2 shadow-sm">
         <i class="fas fa-code-branch text-slate-400"></i>
-        <span class="font-bold">v1.6.0</span>
+        <span class="font-bold">v1.6.2</span>
         <span class="text-slate-300">|</span>
-        <span>最後更新：2026/04/05 01:18</span>
+        <span>最後更新：2026/04/05 01:36</span>
       </div>
       
       <!-- 倒數計時小工具 -->
@@ -313,6 +313,30 @@
           class="bg-white rounded-3xl shadow-sm border border-slate-100 p-4 sm:p-5 relative overflow-hidden"
         >
           <div class="timeline-line"></div>
+
+          <!-- 預約 Uber 時間 -->
+          <div class="relative z-10 flex gap-4 mb-8 items-center">
+            <div class="icon-box bg-slate-800 text-white shrink-0 shadow-sm border-slate-200">
+              <i class="fab fa-uber"></i>
+            </div>
+            <div>
+              <div class="font-bold text-lg">11:30 搭乘 Uber 出發</div>
+              <p class="text-slate-600 text-sm">提早預約好含寶寶汽座的車，免扛行李輕鬆前往機場。</p>
+            </div>
+          </div>
+
+          <!-- 抵達桃園機場時間 (修改為 Icon 版本) -->
+          <div class="relative z-10 flex gap-4 mb-8 items-center">
+            <div class="icon-box bg-sky-100 text-sky-600 shrink-0">
+              <i class="fas fa-suitcase-rolling text-xl"></i>
+            </div>
+            <div>
+              <div class="font-bold text-lg">12:30 抵達桃園機場</div>
+              <p class="text-slate-600 text-sm mt-1">
+                報到掛行李，可以先吃個簡單午餐，讓理悠稍微活動放電一下準備上機。
+              </p>
+            </div>
+          </div>
 
           <div class="relative z-10 flex gap-4 mb-8 items-start">
             <img
@@ -928,17 +952,13 @@
         >
           <div class="timeline-line"></div>
 
-          <!-- Klook 和服預訂卡片更新 -->
+          <!-- Klook 和服預訂卡片更新 (修改為 Icon 版本) -->
           <div
             class="relative z-10 flex gap-4 items-start bg-pink-50 p-4 rounded-2xl border border-pink-200 mb-8 shadow-sm"
           >
-            <img
-              src="images/d5-kimono.jpg"
-              onerror="this.src='https://placehold.co/150x150/fbcfe8/be185d?text=Kimono'"
-              alt="和服體驗"
-              class="thumb-img shrink-0 border-pink-300"
-              loading="lazy"
-            />
+            <div class="icon-box bg-pink-100 text-pink-500 shrink-0 !ml-0 border-pink-300 shadow-sm">
+              <i class="fas fa-camera-retro text-xl"></i>
+            </div>
             <div class="pt-1 w-full">
               <div class="text-xs font-bold text-pink-500 mb-1 tracking-wider">
                 <i class="fas fa-ticket-alt"></i> KLOOK 預訂確認
