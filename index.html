@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>尼克一家的京阪耍廢之旅 ✈️</title>
+    <title>尼克一家的京阪之旅 ✈️</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -204,12 +204,18 @@
     </nav>
 
     <!-- 版本號與更新時間 Badge -->
-    <div class="max-w-3xl mx-auto px-4 flex justify-center -mt-2 mb-6 relative z-10">
-      <div class="bg-slate-200/60 backdrop-blur-sm border border-slate-300/50 text-slate-600 text-[10px] sm:text-xs px-4 py-1.5 rounded-full font-mono flex items-center gap-2 shadow-sm">
+    <div class="max-w-3xl mx-auto px-4 flex justify-between items-center -mt-2 mb-6 relative z-10">
+      <div class="bg-slate-200/60 backdrop-blur-sm border border-slate-300/50 text-slate-600 text-[10px] sm:text-xs px-3 py-1.5 rounded-full font-mono flex items-center gap-2 shadow-sm">
         <i class="fas fa-code-branch text-slate-400"></i>
-        <span class="font-bold">v1.3.0</span>
+        <span class="font-bold">v1.4.0</span>
         <span class="text-slate-300">|</span>
         <span>最後更新：2026/04/05 00:12</span>
+      </div>
+      
+      <!-- 倒數計時小工具 -->
+      <div id="countdown-badge" class="bg-rose-100 border border-rose-200 text-rose-700 text-[10px] sm:text-xs px-3 py-1.5 rounded-full font-bold flex items-center gap-1.5 shadow-sm">
+        <i class="fas fa-plane-departure"></i>
+        <span id="countdown-text">計算中...</span>
       </div>
     </div>
 
@@ -278,16 +284,21 @@
     <main class="max-w-3xl mx-auto px-4 mt-8 space-y-10">
       <!-- D1 -->
       <section id="d1" class="scroll-mt-24">
-        <div class="flex items-center gap-3 mb-4">
-          <div
-            class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md"
-          >
-            D1
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+              D1
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">桃園 ➔ 大阪</h2>
+              <p class="text-slate-500 text-sm">4/28 (週二) · 安頓與補給</p>
+            </div>
           </div>
-          <div>
-            <h2 class="text-2xl font-bold">桃園 ➔ 大阪</h2>
-            <p class="text-slate-500 text-sm">4/28 (週二) · 安頓與補給</p>
-          </div>
+          <!-- 天氣預報組件 (可供未來擴充) -->
+          <a href="https://weather.com/zh-TW/weather/tenday/l/Osaka+Osaka+Japan" target="_blank" class="flex flex-col items-center bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看大阪天氣預報">
+            <i class="fas fa-cloud-sun text-blue-400 text-lg"></i>
+            <span class="text-[10px] text-blue-600 font-bold mt-0.5">天氣預報</span>
+          </a>
         </div>
 
         <div
@@ -382,18 +393,23 @@
 
       <!-- D2 -->
       <section id="d2" class="scroll-mt-24">
-        <div class="flex items-center gap-3 mb-4">
-          <div
-            class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md"
-          >
-            D2
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+              D2
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold flex items-center flex-wrap gap-2">
+                海遊館與招待大餐
+              </h2>
+              <p class="text-slate-500 text-sm">4/29 (週三) · 昭和之日 (假日)</p>
+            </div>
           </div>
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold flex items-center flex-wrap gap-2">
-              海遊館與招待大餐
-            </h2>
-            <p class="text-slate-500 text-sm">4/29 (週三) · 昭和之日 (假日)</p>
-          </div>
+          <!-- 天氣預報組件 -->
+          <a href="https://weather.com/zh-TW/weather/tenday/l/Osaka+Osaka+Japan" target="_blank" class="flex flex-col items-center bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看大阪天氣預報">
+            <i class="fas fa-cloud-sun text-blue-400 text-lg"></i>
+            <span class="text-[10px] text-blue-600 font-bold mt-0.5">天氣預報</span>
+          </a>
         </div>
 
         <!-- Jack叔叔專屬 VIP 放大版大頭貼卡片 -->
@@ -570,16 +586,21 @@
 
       <!-- D3 -->
       <section id="d3" class="scroll-mt-24">
-        <div class="flex items-center gap-3 mb-4">
-          <div
-            class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md"
-          >
-            D3
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+              D3
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">勇闖環球影城</h2>
+              <p class="text-slate-500 text-sm">4/30 (週四) · USJ 體力戰</p>
+            </div>
           </div>
-          <div>
-            <h2 class="text-2xl font-bold">勇闖環球影城</h2>
-            <p class="text-slate-500 text-sm">4/30 (週四) · USJ 體力戰</p>
-          </div>
+          <!-- 天氣預報組件 -->
+          <a href="https://weather.com/zh-TW/weather/tenday/l/Osaka+Osaka+Japan" target="_blank" class="flex flex-col items-center bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看大阪天氣預報">
+            <i class="fas fa-cloud-sun text-blue-400 text-lg"></i>
+            <span class="text-[10px] text-blue-600 font-bold mt-0.5">天氣預報</span>
+          </a>
         </div>
 
         <div
@@ -632,7 +653,7 @@
             <div class="pt-1">
               <div class="font-bold text-lg">12:00 午餐：造型速食</div>
               <p class="text-slate-600 text-sm mt-1">
-                史努比快餐店吃可愛兒童餐休息。
+                史努快餐店吃可愛兒童餐休息。
               </p>
             </div>
           </div>
@@ -724,16 +745,21 @@
 
       <!-- D4 -->
       <section id="d4" class="scroll-mt-24">
-        <div class="flex items-center gap-3 mb-4">
-          <div
-            class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md"
-          >
-            D4
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+              D4
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">大阪 ➔ 京都</h2>
+              <p class="text-slate-500 text-sm">5/01 (週五) · 黑門市場與移動</p>
+            </div>
           </div>
-          <div>
-            <h2 class="text-2xl font-bold">大阪 ➔ 京都</h2>
-            <p class="text-slate-500 text-sm">5/01 (週五) · 黑門市場與移動</p>
-          </div>
+          <!-- 天氣預報組件 -->
+          <a href="https://weather.com/zh-TW/weather/tenday/l/Kyoto+Kyoto+Japan" target="_blank" class="flex flex-col items-center bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看京都天氣預報">
+            <i class="fas fa-cloud-sun text-blue-400 text-lg"></i>
+            <span class="text-[10px] text-blue-600 font-bold mt-0.5">天氣預報</span>
+          </a>
         </div>
 
         <div
@@ -859,16 +885,21 @@
 
       <!-- D5 -->
       <section id="d5" class="scroll-mt-24">
-        <div class="flex items-center gap-3 mb-4">
-          <div
-            class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md"
-          >
-            D5
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+              D5
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">和服與極品炸豬排</h2>
+              <p class="text-slate-500 text-sm">5/02 (週六) · 拍照與美食日</p>
+            </div>
           </div>
-          <div>
-            <h2 class="text-2xl font-bold">和服與極品炸豬排</h2>
-            <p class="text-slate-500 text-sm">5/02 (週六) · 拍照與美食日</p>
-          </div>
+          <!-- 天氣預報組件 -->
+          <a href="https://weather.com/zh-TW/weather/tenday/l/Kyoto+Kyoto+Japan" target="_blank" class="flex flex-col items-center bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看京都天氣預報">
+            <i class="fas fa-cloud-sun text-blue-400 text-lg"></i>
+            <span class="text-[10px] text-blue-600 font-bold mt-0.5">天氣預報</span>
+          </a>
         </div>
 
         <div
@@ -897,16 +928,24 @@
                 👗 女士和服(含髮型/配飾) + 👦 兒童和服(75-145cm)
               </p>
               
-              <!-- 注意事項區塊 -->
+              <!-- 換裝流程與注意事項區塊 -->
               <div class="mb-4 bg-white/70 p-3 rounded-xl border border-pink-100 text-xs text-pink-900 shadow-sm">
-                <div class="font-bold mb-1 text-sm"><i class="fas fa-exclamation-circle text-pink-500"></i> 預訂方案注意事項：</div>
-                <ul class="list-disc pl-4 space-y-1">
-                    <li>請務必於預約時間 <strong>10:30</strong> 準時抵達，遲到可能需要重新排隊或影響換裝順序。</li>
-                    <li>方案已包含精美髮型與配飾，但<strong>不含化妝服務</strong>，建議媽媽自行完妝後再前往。</li>
-                    <li>理悠的兒童和服限身高範圍為 75cm-145cm。</li>
-                    <li>請留意店家規定的<strong>最晚歸還時間</strong>（通常為當日傍晚前），避免產生超時費用。</li>
-                    <li>店家通常提供免費寄放換下的隨身衣物及隨身包包，但<strong>大型行李箱</strong>可能需另外收費，建議不要帶大行李前往。</li>
+                <div class="font-bold mb-1 text-sm"><i class="fas fa-magic text-pink-500"></i> 換裝流程簡述：</div>
+                <ul class="list-decimal pl-4 mb-3 space-y-1">
+                    <li>出示憑證報到、挑選喜歡的和服款式與腰帶。</li>
+                    <li>由專業著付師協助穿著和服。</li>
+                    <li>前往妝髮區，由造型師設計精美髮型與挑選髮飾。</li>
+                    <li>挑選搭配的草履(木屐)與隨身小包包，出發拍照！</li>
                 </ul>
+                <div class="bg-pink-100/50 p-2 rounded-lg border border-pink-200">
+                  <div class="font-bold mb-1 text-pink-700"><i class="fas fa-exclamation-circle text-pink-500"></i> 重要注意事項：</div>
+                  <ul class="list-disc pl-4 space-y-1">
+                      <li><strong>預估時間：</strong>整個換裝流程約需 <strong>40-60 分鐘</strong>。</li>
+                      <li><strong>穿衣建議：</strong>請務必穿著<strong>開襟式（前扣）的上衣</strong>，以避免在換裝脫衣時弄壞已做好的精美妝髮。</li>
+                      <li><strong>準時抵達：</strong>請於 10:30 準時報到，遲到可能會影響後續換裝與用餐時間。</li>
+                      <li><strong>行李寄放：</strong>可免費寄放隨身衣物，但大型行李箱可能需另外收費。</li>
+                  </ul>
+                </div>
               </div>
 
               <div class="flex flex-wrap gap-2">
@@ -1052,16 +1091,21 @@
 
       <!-- D6 -->
       <section id="d6" class="scroll-mt-24">
-        <div class="flex items-center gap-3 mb-4">
-          <div
-            class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md"
-          >
-            D6
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+              D6
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">和牛燒肉與壽喜燒</h2>
+              <p class="text-slate-500 text-sm">5/03 (週日) · 祇園慢活與大餐</p>
+            </div>
           </div>
-          <div>
-            <h2 class="text-2xl font-bold">和牛燒肉與壽喜燒</h2>
-            <p class="text-slate-500 text-sm">5/03 (週日) · 祇園慢活與大餐</p>
-          </div>
+          <!-- 天氣預報組件 -->
+          <a href="https://weather.com/zh-TW/weather/tenday/l/Kyoto+Kyoto+Japan" target="_blank" class="flex flex-col items-center bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看京都天氣預報">
+            <i class="fas fa-cloud-sun text-blue-400 text-lg"></i>
+            <span class="text-[10px] text-blue-600 font-bold mt-0.5">天氣預報</span>
+          </a>
         </div>
 
         <div
@@ -1236,18 +1280,23 @@
 
       <!-- D7 -->
       <section id="d7" class="scroll-mt-24">
-        <div class="flex items-center gap-3 mb-4">
-          <div
-            class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md"
-          >
-            D7
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+              D7
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">京都 ➔ 臨空城</h2>
+              <p class="text-slate-500 text-sm">
+                5/04 (週一) · 最終爆買與別墅派對
+              </p>
+            </div>
           </div>
-          <div>
-            <h2 class="text-2xl font-bold">京都 ➔ 臨空城</h2>
-            <p class="text-slate-500 text-sm">
-              5/04 (週一) · 最終爆買與別墅派對
-            </p>
-          </div>
+          <!-- 天氣預報組件 -->
+          <a href="https://weather.com/zh-TW/weather/tenday/l/Osaka+Osaka+Japan" target="_blank" class="flex flex-col items-center bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看大阪天氣預報">
+            <i class="fas fa-cloud-sun text-blue-400 text-lg"></i>
+            <span class="text-[10px] text-blue-600 font-bold mt-0.5">天氣預報</span>
+          </a>
         </div>
 
         <div
@@ -1343,15 +1392,15 @@
 
       <!-- D8 -->
       <section id="d8" class="scroll-mt-24 mb-10">
-        <div class="flex items-center gap-3 mb-4">
-          <div
-            class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md"
-          >
-            D8
-          </div>
-          <div>
-            <h2 class="text-2xl font-bold">滿載而歸 ➔ 桃園</h2>
-            <p class="text-slate-500 text-sm">5/05 (週二) · 回家囉</p>
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="bg-rose-500 text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+              D8
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">滿載而歸 ➔ 桃園</h2>
+              <p class="text-slate-500 text-sm">5/05 (週二) · 回家囉</p>
+            </div>
           </div>
         </div>
 
@@ -1935,6 +1984,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // --- 導覽列滾動監聽 ---
         const navLinks = document.querySelectorAll('nav a[href^="#"]');
         const sections = Array.from(navLinks)
           .map((link) => document.querySelector(link.getAttribute("href")))
@@ -1968,6 +2018,49 @@
         updateActiveNav();
         window.addEventListener("scroll", updateActiveNav);
         window.addEventListener("resize", updateActiveNav);
+        
+        // --- 出發倒數計時器 ---
+        function updateCountdown() {
+            // 設定出發日期 (2026/04/28 00:00:00)
+            const departureDate = new Date('2026-04-28T00:00:00');
+            const now = new Date();
+            const difference = departureDate.getTime() - now.getTime();
+            const countdownTextElement = document.getElementById('countdown-text');
+            
+            if (difference > 0) {
+                // 計算剩餘天數
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                
+                if (days > 0) {
+                    countdownTextElement.innerText = `距離出發還有 ${days} 天`;
+                } else if (hours > 0) {
+                    countdownTextElement.innerText = `距離出發還有 ${hours} 小時！`;
+                } else {
+                    countdownTextElement.innerText = `準備登機！`;
+                }
+            } else {
+                // 已經出發或行程中
+                const endDate = new Date('2026-05-05T23:59:59');
+                if (now <= endDate) {
+                    document.getElementById('countdown-badge').classList.replace('bg-rose-100', 'bg-emerald-100');
+                    document.getElementById('countdown-badge').classList.replace('border-rose-200', 'border-emerald-200');
+                    document.getElementById('countdown-badge').classList.replace('text-rose-700', 'text-emerald-700');
+                    document.querySelector('#countdown-badge i').className = 'fas fa-map-marked-alt';
+                    countdownTextElement.innerText = `旅途愉快！`;
+                } else {
+                    document.getElementById('countdown-badge').classList.replace('bg-rose-100', 'bg-slate-100');
+                    document.getElementById('countdown-badge').classList.replace('border-rose-200', 'border-slate-200');
+                    document.getElementById('countdown-badge').classList.replace('text-rose-700', 'text-slate-600');
+                    document.querySelector('#countdown-badge i').className = 'fas fa-home';
+                    countdownTextElement.innerText = `平安歸來`;
+                }
+            }
+        }
+        
+        updateCountdown();
+        // 每小時更新一次計時器
+        setInterval(updateCountdown, 1000 * 60 * 60);
       });
     </script>
   </body>
