@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- PWA 類 APP 沉浸式體驗 Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#f43f5e" />
+    <link rel="apple-touch-icon" href="images/hero-bg.jpg" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
     <title>尼克一家的京阪之旅 ✈️</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -207,9 +215,9 @@
     <div class="max-w-3xl mx-auto px-4 flex justify-between items-center -mt-2 mb-6 relative z-10">
       <div class="bg-slate-200/60 backdrop-blur-sm border border-slate-300/50 text-slate-600 text-[10px] sm:text-xs px-3 py-1.5 rounded-full font-mono flex items-center gap-2 shadow-sm">
         <i class="fas fa-code-branch text-slate-400"></i>
-        <span class="font-bold">v1.5.1</span>
+        <span class="font-bold">v1.6.0</span>
         <span class="text-slate-300">|</span>
-        <span>最後更新：2026/04/05 01:11</span>
+        <span>最後更新：2026/04/05 01:18</span>
       </div>
       
       <!-- 倒數計時小工具 -->
@@ -226,7 +234,7 @@
       <div
         class="hero-frame relative p-3 sm:p-4 shadow-xl border border-slate-200"
       >
-        <!-- 這裡放你的直版全家福 -->
+        <!-- 這裡放你的直版全家福 (首圖不 Lazy Load 確保秒開) -->
         <img
           src="images/hero-bg.jpg"
           onerror="this.src='https://placehold.co/600x800/f1f5f9/cbd5e1?text=Family+Photo'"
@@ -294,7 +302,7 @@
               <p class="text-slate-500 text-sm">4/28 (週二) · 安頓與補給</p>
             </div>
           </div>
-          <!-- 大阪天氣預報組件 (修改為 Google 搜尋) -->
+          <!-- 大阪天氣預報組件 -->
           <a href="https://www.google.com/search?q=大阪天氣預報" target="_blank" class="flex flex-col items-center justify-center bg-blue-50 w-[4.5rem] py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看大阪天氣預報" data-city="osaka">
             <i class="fas fa-spinner fa-spin text-blue-400 text-lg"></i>
             <span class="text-[10px] text-blue-600 font-bold mt-0.5">載入中</span>
@@ -312,6 +320,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Airplane'"
               alt="飛機"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1">
               <div class="font-bold text-lg">19:00 抵達關西機場</div>
@@ -338,6 +347,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Dinner'"
               alt="串燒宵夜"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1">
               <div class="font-bold text-lg">21:30 晚餐：外帶串燒宵夜</div>
@@ -405,7 +415,7 @@
               <p class="text-slate-500 text-sm">4/29 (週三) · 昭和之日 (假日)</p>
             </div>
           </div>
-          <!-- 大阪天氣預報組件 (修改為 Google 搜尋) -->
+          <!-- 大阪天氣預報組件 -->
           <a href="https://www.google.com/search?q=大阪天氣預報" target="_blank" class="flex flex-col items-center justify-center bg-blue-50 w-[4.5rem] py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看大阪天氣預報" data-city="osaka">
             <i class="fas fa-spinner fa-spin text-blue-400 text-lg"></i>
             <span class="text-[10px] text-blue-600 font-bold mt-0.5">載入中</span>
@@ -422,6 +432,7 @@
               onerror="this.src='https://placehold.co/150x150/bfdbfe/1e3a8a?text=VIP'"
               alt="Jack叔叔"
               class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-4 border-white shadow-md bg-blue-200"
+              loading="lazy"
             />
             <div>
               <div
@@ -452,6 +463,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Lunch'"
               alt="大阪燒"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1">
               <div class="font-bold text-lg">11:00 午餐：風月大阪燒</div>
@@ -469,6 +481,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Aquarium'"
               alt="海遊館"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-lg">12:30 景點：海遊館</div>
@@ -526,6 +539,7 @@
               onerror="this.src='https://placehold.co/150x150/fef3c7/b45309?text=Yakiniku'"
               alt="天王寺燒肉"
               class="thumb-img shrink-0 border-amber-300"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-xl text-amber-700">
@@ -596,7 +610,7 @@
               <p class="text-slate-500 text-sm">4/30 (週四) · USJ 體力戰</p>
             </div>
           </div>
-          <!-- 大阪天氣預報組件 (修改為 Google 搜尋) -->
+          <!-- 大阪天氣預報組件 -->
           <a href="https://www.google.com/search?q=大阪天氣預報" target="_blank" class="flex flex-col items-center justify-center bg-blue-50 w-[4.5rem] py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看大阪天氣預報" data-city="osaka">
             <i class="fas fa-spinner fa-spin text-blue-400 text-lg"></i>
             <span class="text-[10px] text-blue-600 font-bold mt-0.5">載入中</span>
@@ -614,6 +628,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=USJ'"
               alt="遊樂園"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-lg">10:00 環球影城入園</div>
@@ -649,6 +664,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Lunch'"
               alt="可愛兒童餐"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1">
               <div class="font-bold text-lg">12:00 午餐：造型速食</div>
@@ -685,6 +701,7 @@
               onerror="this.src='https://placehold.co/150x150/bfdbfe/1d4ed8?text=Izakaya'"
               alt="難波居酒屋"
               class="thumb-img shrink-0 border-blue-300"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-xl text-blue-700">
@@ -755,7 +772,7 @@
               <p class="text-slate-500 text-sm">5/01 (週五) · 黑門市場與移動</p>
             </div>
           </div>
-          <!-- 京都天氣預報組件 (修改為 Google 搜尋) -->
+          <!-- 京都天氣預報組件 -->
           <a href="https://www.google.com/search?q=京都天氣預報" target="_blank" class="flex flex-col items-center justify-center bg-blue-50 w-[4.5rem] py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看京都天氣預報" data-city="kyoto">
             <i class="fas fa-spinner fa-spin text-blue-400 text-lg"></i>
             <span class="text-[10px] text-blue-600 font-bold mt-0.5">載入中</span>
@@ -773,6 +790,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Market'"
               alt="黑門市場"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-lg">10:00 黑門市場早午餐</div>
@@ -794,6 +812,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Kyoto'"
               alt="京都"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-lg">11:30 退房前往京都</div>
@@ -809,6 +828,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Snack'"
               alt="市場小吃"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-lg">15:00 午餐：錦市場小吃</div>
@@ -830,6 +850,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Ramen'"
               alt="京都拉麵"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1">
               <div class="font-bold text-lg">18:30 晚餐：河原町拉麵</div>
@@ -895,7 +916,7 @@
               <p class="text-slate-500 text-sm">5/02 (週六) · 拍照與美食日</p>
             </div>
           </div>
-          <!-- 京都天氣預報組件 (修改為 Google 搜尋) -->
+          <!-- 京都天氣預報組件 -->
           <a href="https://www.google.com/search?q=京都天氣預報" target="_blank" class="flex flex-col items-center justify-center bg-blue-50 w-[4.5rem] py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看京都天氣預報" data-city="kyoto">
             <i class="fas fa-spinner fa-spin text-blue-400 text-lg"></i>
             <span class="text-[10px] text-blue-600 font-bold mt-0.5">載入中</span>
@@ -916,6 +937,7 @@
               onerror="this.src='https://placehold.co/150x150/fbcfe8/be185d?text=Kimono'"
               alt="和服體驗"
               class="thumb-img shrink-0 border-pink-300"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="text-xs font-bold text-pink-500 mb-1 tracking-wider">
@@ -970,6 +992,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Temple'"
               alt="清水寺"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-lg">11:30 景點：清水寺拍照散步</div>
@@ -994,6 +1017,7 @@
               onerror="this.src='https://placehold.co/150x150/d1fae5/047857?text=Pork'"
               alt="空蟬亭炸豬排"
               class="thumb-img shrink-0 border-emerald-300"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div
@@ -1043,6 +1067,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Izakaya'"
               alt="居酒屋"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1">
               <div class="font-bold text-lg">17:30 晚餐：祇園串燒</div>
@@ -1101,7 +1126,7 @@
               <p class="text-slate-500 text-sm">5/03 (週日) · 祇園慢活與大餐</p>
             </div>
           </div>
-          <!-- 京都天氣預報組件 (修改為 Google 搜尋) -->
+          <!-- 京都天氣預報組件 -->
           <a href="https://www.google.com/search?q=京都天氣預報" target="_blank" class="flex flex-col items-center justify-center bg-blue-50 w-[4.5rem] py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看京都天氣預報" data-city="kyoto">
             <i class="fas fa-spinner fa-spin text-blue-400 text-lg"></i>
             <span class="text-[10px] text-blue-600 font-bold mt-0.5">載入中</span>
@@ -1119,6 +1144,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Gion'"
               alt="祇園白川"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1">
               <div class="font-bold text-lg">10:00 景點：祇園白川</div>
@@ -1167,6 +1193,7 @@
               onerror="this.src='https://placehold.co/150x150/ffe4e6/be123c?text=BBQ'"
               alt="Kyo Kurozakura"
               class="thumb-img shrink-0 border-rose-300"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="text-xs font-bold text-rose-500 mb-1 tracking-wider">
@@ -1208,6 +1235,7 @@
               onerror="this.src='https://placehold.co/150x150/ffe4e6/be123c?text=Sukiyaki'"
               alt="モリタ屋 (Moritaya) 祇園店"
               class="thumb-img shrink-0 border-rose-300"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="text-xs font-bold text-rose-500 mb-1 tracking-wider">
@@ -1292,7 +1320,7 @@
               </p>
             </div>
           </div>
-          <!-- 大阪天氣預報組件 (修改為 Google 搜尋) -->
+          <!-- 大阪天氣預報組件 -->
           <a href="https://www.google.com/search?q=大阪天氣預報" target="_blank" class="flex flex-col items-center justify-center bg-blue-50 w-[4.5rem] py-1.5 rounded-xl border border-blue-100 hover:bg-blue-100 transition shadow-sm" title="點擊查看大阪天氣預報" data-city="osaka">
             <i class="fas fa-spinner fa-spin text-blue-400 text-lg"></i>
             <span class="text-[10px] text-blue-600 font-bold mt-0.5">載入中</span>
@@ -1310,6 +1338,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Outlet'"
               alt="Outlet"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-lg">11:00 景點：臨空城 Outlet</div>
@@ -1331,6 +1360,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Dinner'"
               alt="和牛"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1 w-full">
               <div class="font-bold text-lg">18:00 晚餐：超市爆買派對</div>
@@ -1415,6 +1445,7 @@
               onerror="this.src='https://placehold.co/150x150/f1f5f9/cbd5e1?text=Breakfast'"
               alt="豐盛早餐"
               class="thumb-img shrink-0"
+              loading="lazy"
             />
             <div class="pt-1">
               <div class="font-bold text-lg">09:30 早餐：悠哉清冰箱</div>
@@ -1982,6 +2013,45 @@
       <p>Created for Nick, Nina, Riyu & Uncle Jack ❤️</p>
     </footer>
 
+    <!-- 右下角浮動按鈕區塊 (FAB) -->
+    <div class="fixed bottom-6 right-4 z-50 flex flex-col gap-3">
+      <!-- 匯率換算按鈕 -->
+      <button id="currency-btn" class="w-11 h-11 sm:w-12 sm:h-12 bg-white/95 backdrop-blur-sm shadow-xl border border-slate-200 text-emerald-600 rounded-full flex items-center justify-center text-lg sm:text-xl hover:bg-emerald-50 transition transform hover:scale-105" title="即時匯率換算">
+        <i class="fas fa-yen-sign"></i>
+      </button>
+      <!-- 回到頂部按鈕 -->
+      <button id="scrollTop-btn" class="w-11 h-11 sm:w-12 sm:h-12 bg-white/95 backdrop-blur-sm shadow-xl border border-slate-200 text-slate-600 rounded-full flex items-center justify-center text-lg sm:text-xl opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-slate-50" title="回到頂部">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- 匯率換算 Modal -->
+    <div id="currency-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+      <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 p-6 w-full max-w-xs transform scale-95 transition-transform duration-300" id="currency-modal-content">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="font-bold text-lg text-slate-800 flex items-center gap-2"><i class="fas fa-calculator text-emerald-500"></i> 匯率快算</h3>
+          <button id="close-currency-modal" class="text-slate-400 hover:text-slate-600 p-1"><i class="fas fa-times text-xl"></i></button>
+        </div>
+        <div class="mb-4">
+          <div class="text-[11px] text-slate-500 mb-1.5 flex justify-between font-medium">
+            <span>今日匯率參考</span>
+            <span id="rate-display">讀取中...</span>
+          </div>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-500 font-bold">¥</span>
+            <input type="number" id="jpy-input" class="w-full bg-slate-50 border border-slate-200 text-slate-800 rounded-xl py-3 pl-8 pr-4 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition text-lg font-bold" placeholder="輸入日幣金額" inputmode="numeric" />
+          </div>
+        </div>
+        <div class="flex items-center justify-center text-slate-300 mb-4">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="relative mb-2">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-emerald-600 font-bold">NT$</span>
+          <div id="twd-output" class="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-xl py-3 pl-12 pr-4 text-xl font-bold min-h-[3.25rem] flex items-center">0</div>
+        </div>
+      </div>
+    </div>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // --- 導覽列滾動監聽 ---
@@ -2021,14 +2091,12 @@
         
         // --- 出發倒數計時器 ---
         function updateCountdown() {
-            // 設定出發日期 (2026/04/28 00:00:00)
             const departureDate = new Date('2026-04-28T00:00:00');
             const now = new Date();
             const difference = departureDate.getTime() - now.getTime();
             const countdownTextElement = document.getElementById('countdown-text');
             
             if (difference > 0) {
-                // 計算剩餘天數
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 
@@ -2040,7 +2108,6 @@
                     countdownTextElement.innerText = `準備登機！`;
                 }
             } else {
-                // 已經出發或行程中
                 const endDate = new Date('2026-05-05T23:59:59');
                 if (now <= endDate) {
                     document.getElementById('countdown-badge').classList.replace('bg-rose-100', 'bg-emerald-100');
@@ -2059,21 +2126,17 @@
         }
         
         updateCountdown();
-        // 每小時更新一次計時器
         setInterval(updateCountdown, 1000 * 60 * 60);
 
         // --- 實時天氣預報 (Open-Meteo API) ---
         async function fetchWeather() {
             try {
-                // 抓取大阪天氣
                 const osakaRes = await fetch('https://api.open-meteo.com/v1/forecast?latitude=34.6937&longitude=135.5022&current_weather=true&timezone=Asia%2FTokyo');
                 const osakaData = await osakaRes.json();
                 
-                // 抓取京都天氣
                 const kyotoRes = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35.0116&longitude=135.7680&current_weather=true&timezone=Asia%2FTokyo');
                 const kyotoData = await kyotoRes.json();
 
-                // 解析 WMO 天氣代碼並轉換為 FontAwesome Icon
                 const getWeatherUI = (code) => {
                     if (code === 0) return { icon: 'fa-sun', color: 'text-amber-500' };
                     if (code === 1 || code === 2) return { icon: 'fa-cloud-sun', color: 'text-amber-500' };
@@ -2083,7 +2146,7 @@
                     if (code >= 71 && code <= 77) return { icon: 'fa-snowflake', color: 'text-blue-300' };
                     if (code >= 80 && code <= 82) return { icon: 'fa-cloud-showers-heavy', color: 'text-blue-600' };
                     if (code >= 95) return { icon: 'fa-bolt', color: 'text-purple-500' };
-                    return { icon: 'fa-cloud-sun', color: 'text-blue-400' }; // 預設值
+                    return { icon: 'fa-cloud-sun', color: 'text-blue-400' };
                 };
 
                 const updateWidgets = (city, data) => {
@@ -2095,7 +2158,6 @@
                         const iconEl = widget.querySelector('i');
                         const textEl = widget.querySelector('span');
                         
-                        // 更新樣式與數值
                         iconEl.className = `fas ${ui.icon} ${ui.color} text-lg`;
                         textEl.innerText = temp;
                         textEl.className = `text-[11px] text-slate-700 font-bold mt-0.5 tracking-wide`;
@@ -2107,7 +2169,6 @@
 
             } catch (error) {
                 console.error('天氣 API 載入失敗:', error);
-                // 失敗時恢復原本的預設文字
                 document.querySelectorAll('[data-city] span').forEach(el => {
                     if (el.innerText === '載入中') el.innerText = '天氣預報';
                 });
@@ -2116,8 +2177,72 @@
                 });
             }
         }
-        
         fetchWeather();
+
+        // --- 實時匯率 API 邏輯 ---
+        let currentRate = 0.212; // 安全預設值
+        async function fetchCurrency() {
+            try {
+                const res = await fetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/jpy.json');
+                const data = await res.json();
+                if(data && data.jpy && data.jpy.twd) {
+                    currentRate = data.jpy.twd;
+                    document.getElementById('rate-display').innerText = `1 JPY ≈ ${currentRate.toFixed(4)} TWD`;
+                }
+            } catch (err) {
+                console.error('匯率 API 載入失敗，使用預設值', err);
+                document.getElementById('rate-display').innerText = `離線模式 (約 0.212)`;
+            }
+        }
+        fetchCurrency(); // 網頁載入時偷偷在背景抓取最新匯率
+
+        // --- 匯率 Modal 開關與計算邏輯 ---
+        const currencyBtn = document.getElementById('currency-btn');
+        const currencyModal = document.getElementById('currency-modal');
+        const currencyModalContent = document.getElementById('currency-modal-content');
+        const closeCurrencyModal = document.getElementById('close-currency-modal');
+        const jpyInput = document.getElementById('jpy-input');
+        const twdOutput = document.getElementById('twd-output');
+
+        function toggleModal(show) {
+            if(show) {
+                currencyModal.classList.remove('opacity-0', 'pointer-events-none');
+                currencyModalContent.classList.remove('scale-95');
+                jpyInput.focus();
+            } else {
+                currencyModal.classList.add('opacity-0', 'pointer-events-none');
+                currencyModalContent.classList.add('scale-95');
+                jpyInput.blur();
+            }
+        }
+
+        currencyBtn.addEventListener('click', () => toggleModal(true));
+        closeCurrencyModal.addEventListener('click', () => toggleModal(false));
+        currencyModal.addEventListener('click', (e) => {
+            if(e.target === currencyModal) toggleModal(false);
+        });
+
+        jpyInput.addEventListener('input', (e) => {
+            const jpy = parseFloat(e.target.value);
+            if(isNaN(jpy) || jpy <= 0) {
+                twdOutput.innerText = '0';
+            } else {
+                twdOutput.innerText = Math.round(jpy * currentRate).toLocaleString();
+            }
+        });
+
+        // --- 一鍵回到頂部邏輯 ---
+        const scrollTopBtn = document.getElementById('scrollTop-btn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
       });
     </script>
   </body>
