@@ -150,9 +150,72 @@
     </style>
   </head>
   <body class="text-slate-800 antialiased pb-20 pt-20">
+    <!-- Navigation -->
+    <nav
+      class="glass-nav fixed inset-x-0 top-0 z-50 shadow-sm border-b border-slate-100 overflow-x-auto whitespace-nowrap py-3 px-2 hide-scrollbar"
+    >
+      <div class="inline-flex min-w-max gap-2">
+        <a
+          href="#d1"
+          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
+          >D1</a
+        >
+        <a
+          href="#d2"
+          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
+          >D2</a
+        >
+        <a
+          href="#d3"
+          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
+          >D3</a
+        >
+        <a
+          href="#d4"
+          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
+          >D4</a
+        >
+        <a
+          href="#d5"
+          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
+          >D5</a
+        >
+        <a
+          href="#d6"
+          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
+          >D6</a
+        >
+        <a
+          href="#d7"
+          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
+          >D7</a
+        >
+        <a
+          href="#d8"
+          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
+          >D8</a
+        >
+        <a
+          href="#backup"
+          class="px-4 py-2 rounded-full bg-amber-100 text-amber-700 font-bold text-sm hover:bg-amber-200 transition shadow-sm border border-amber-200"
+          ><i class="fas fa-life-ring"></i> 備案</a
+        >
+      </div>
+    </nav>
+
+    <!-- 版本號與更新時間 Badge -->
+    <div class="max-w-3xl mx-auto px-4 flex justify-center -mt-2 mb-6 relative z-10">
+      <div class="bg-slate-200/60 backdrop-blur-sm border border-slate-300/50 text-slate-600 text-[10px] sm:text-xs px-4 py-1.5 rounded-full font-mono flex items-center gap-2 shadow-sm">
+        <i class="fas fa-code-branch text-slate-400"></i>
+        <span class="font-bold">v1.2.0</span>
+        <span class="text-slate-300">|</span>
+        <span>最後更新：2026/04/04 23:55</span>
+      </div>
+    </div>
+
     <!-- 專為直版照片設計的拍立得相框區塊 -->
     <div
-      class="max-w-3xl mx-auto flex justify-center pt-8 sm:pt-12 relative z-20 -mb-12 sm:-mb-16"
+      class="max-w-3xl mx-auto flex justify-center pt-2 relative z-20 -mb-12 sm:-mb-16"
     >
       <div
         class="hero-frame relative p-3 sm:p-4 shadow-xl border border-slate-200"
@@ -210,59 +273,6 @@
         </div>
       </div>
     </header>
-
-    <!-- Navigation -->
-    <nav
-      class="glass-nav fixed inset-x-0 top-0 z-50 shadow-sm border-b border-slate-100 overflow-x-auto whitespace-nowrap py-3 px-2 hide-scrollbar"
-    >
-      <div class="inline-flex min-w-max gap-2">
-        <a
-          href="#d1"
-          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
-          >D1</a
-        >
-        <a
-          href="#d2"
-          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
-          >D2</a
-        >
-        <a
-          href="#d3"
-          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
-          >D3</a
-        >
-        <a
-          href="#d4"
-          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
-          >D4</a
-        >
-        <a
-          href="#d5"
-          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
-          >D5</a
-        >
-        <a
-          href="#d6"
-          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
-          >D6</a
-        >
-        <a
-          href="#d7"
-          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
-          >D7</a
-        >
-        <a
-          href="#d8"
-          class="px-3 py-2 rounded-full bg-slate-100 text-slate-600 font-medium text-xs hover:bg-rose-100 hover:text-rose-600 transition"
-          >D8</a
-        >
-        <a
-          href="#backup"
-          class="px-4 py-2 rounded-full bg-amber-100 text-amber-700 font-bold text-sm hover:bg-amber-200 transition shadow-sm border border-amber-200"
-          ><i class="fas fa-life-ring"></i> 備案</a
-        >
-      </div>
-    </nav>
 
     <!-- Main Content -->
     <main class="max-w-3xl mx-auto px-4 mt-8 space-y-10">
@@ -341,14 +351,12 @@
                 <a
                   href="pdfs/namba-booking.pdf"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs px-3 py-1.5 rounded-lg transition border border-rose-200"
                   ><i class="fas fa-file-pdf"></i> 訂房憑證</a
                 >
                 <a
                   href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition border border-slate-200"
                   ><i class="fas fa-location-arrow text-blue-500"></i>
                   地圖導航</a
@@ -469,7 +477,6 @@
               <a
                 href="https://maps.google.com/?cid=8035482904308493516&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"
                 ><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a
               >
@@ -494,7 +501,7 @@
             </div>
           </div>
 
-          <!-- D2 晚餐更新為天王寺燒肉 -->
+          <!-- D2 晚餐 -->
           <div
             class="relative z-10 flex gap-4 items-start bg-amber-50 p-4 rounded-2xl border border-amber-200 mb-8 shadow-sm"
           >
@@ -518,7 +525,6 @@
               <a
                 href="https://maps.google.com/?q=天王寺駅"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs px-4 py-2 rounded-xl transition shadow-sm font-bold"
                 ><i class="fas fa-train"></i> 天王寺車站地圖</a
               >
@@ -540,7 +546,6 @@
                 <a
                   href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1 whitespace-nowrap text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
                   ><i class="fas fa-location-arrow text-blue-500"></i> 導航</a
                 >
@@ -611,7 +616,6 @@
               <a
                 href="https://maps.google.com/?cid=3892796888607511210&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"
                 ><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a
               >
@@ -651,7 +655,7 @@
             </div>
           </div>
 
-          <!-- D3 晚餐更新為難波居酒屋 -->
+          <!-- D3 晚餐 -->
           <div
             class="relative z-10 flex gap-4 items-start bg-blue-50 p-4 rounded-2xl border border-blue-200 mb-8 shadow-sm"
           >
@@ -675,7 +679,6 @@
               <a
                 href="https://maps.google.com/?q=難波駅"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-blue-500 hover:bg-blue-600 text-white text-xs px-4 py-2 rounded-xl transition shadow-sm font-bold"
                 ><i class="fas fa-train"></i> 難波車站地圖</a
               >
@@ -697,7 +700,6 @@
                 <a
                   href="https://maps.google.com/?cid=17506062284967457862&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1 whitespace-nowrap text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
                   ><i class="fas fa-location-arrow text-blue-500"></i> 導航</a
                 >
@@ -754,7 +756,6 @@
               <a
                 href="https://maps.google.com/?cid=12402117845945925953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"
                 ><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a
               >
@@ -791,7 +792,6 @@
               <a
                 href="https://maps.google.com/?cid=13159134450370243740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"
                 ><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a
               >
@@ -828,14 +828,12 @@
                 <a
                   href="pdfs/kyoto-booking.pdf"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs px-3 py-1.5 rounded-lg transition border border-rose-200"
                   ><i class="fas fa-file-pdf"></i> 訂房憑證</a
                 >
                 <a
                   href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition border border-slate-200"
                   ><i class="fas fa-location-arrow text-blue-500"></i>
                   地圖導航</a
@@ -915,14 +913,11 @@
                 <a
                   href="https://maps.app.goo.gl/qvAjRL2fcNGT6LDY6?g_st=ic"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 bg-pink-500 hover:bg-pink-600 text-white text-xs px-3 py-2 rounded-lg transition shadow-sm font-bold"
                 ><i class="fas fa-map-marker-alt"></i> 開啟和服店地圖</a>
-                <!-- 修改 Klook 連結：移除了 utm 等追蹤參數以避免被擋 -->
                 <a
-                  href="https://www.klook.com/zh-TW/activity/141642-kyoto-kiyomizudera-kimono-yukata-makeup-outdoor-photography-mocomoco/?package_id=484219"
+                  href="https://www.klook.com/zh-TW/activity/141642-kyoto-kiyomizudera-kimono-yukata-makeup-outdoor-photography-mocomoco/?package_id=484219&utm_campaign=platform-share&utm_content=platform%3Dios_pagespm%3DActivity_textversion%3D1_shareid%3DE14A0D80-5AE7-4B73-855B-07627E2085CB&utm_medium=line&utm_source=line"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 bg-white border border-pink-200 hover:bg-pink-50 text-pink-600 text-xs px-3 py-2 rounded-lg transition shadow-sm font-bold"
                 ><i class="fas fa-external-link-alt"></i> Klook 行程憑證</a>
               </div>
@@ -945,7 +940,6 @@
               <a
                 href="https://maps.google.com/?cid=7111013964196361402&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"
                 ><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a
               >
@@ -980,7 +974,6 @@
               <a
                 href="https://maps.google.com/?cid=5614739330656938348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-3 py-1.5 rounded-lg transition shadow-sm font-bold"
                 ><i class="fas fa-map-marker-alt"></i> 餐廳地圖</a
               >
@@ -1035,7 +1028,6 @@
                 <a
                   href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1 whitespace-nowrap text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
                   ><i class="fas fa-location-arrow text-blue-500"></i> 導航</a
                 >
@@ -1158,7 +1150,6 @@
               <a
                 href="https://www.google.com/maps/place/Kyo+Kurozakura/@35.0050178,135.7707782,17z/data=!3m1!4b1!4m6!3m5!1s0x6001089531da9679:0xa5ce702a16f75b2c!8m2!3d35.0050178!4d135.7707782!16s%2Fg%2F11bxdtk88z?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs px-3 py-1.5 rounded-lg transition shadow-sm"
                 ><i class="fas fa-map-marker-alt"></i> 開啟地圖 App</a
               >
@@ -1200,7 +1191,6 @@
               <a
                 href="https://www.google.com/maps/place/Moritaya+-+Kiyamachi/@35.0094641,135.7706255,17z/data=!3m1!4b1!4m6!3m5!1s0x600108eccb9daa8f:0xfc84e1f0b888131d!8m2!3d35.0094641!4d135.7706255!16s%2Fg%2F1tcvbs_h?authuser=1&entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs px-3 py-1.5 rounded-lg transition shadow-sm"
                 ><i class="fas fa-map-marker-alt"></i> 開啟地圖 App</a
               >
@@ -1222,7 +1212,6 @@
                 <a
                   href="https://maps.google.com/?cid=14894152044313468583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1 whitespace-nowrap text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded"
                   ><i class="fas fa-location-arrow text-blue-500"></i> 導航</a
                 >
@@ -1281,7 +1270,6 @@
               <a
                 href="https://maps.google.com/?cid=14141131390446530690&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"
                 ><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a
               >
@@ -1303,7 +1291,6 @@
               <a
                 href="https://maps.google.com/?cid=13303253818827808352&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition"
                 ><i class="fas fa-map-marker-alt text-rose-500"></i> 地圖</a
               >
@@ -1325,14 +1312,12 @@
                 <a
                   href="pdfs/rinku-booking.pdf"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs px-3 py-1.5 rounded-lg transition border border-rose-200"
                   ><i class="fas fa-file-pdf"></i> 訂房憑證</a
                 >
                 <a
                   href="https://maps.google.com/?cid=12491694104136309829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-lg transition border border-slate-200"
                   ><i class="fas fa-location-arrow text-blue-500"></i>
                   地圖導航</a
@@ -1460,7 +1445,6 @@
                 <a
                   href="https://www.google.com/maps/place/%E5%94%90%E5%90%89%E8%A8%B6%E5%BE%B7+%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97/@34.6692979,135.5000694,17z/data=!3m2!4b1!5s0x6000e714601f6ea3:0x2b9b5e0eed6e0609!4m6!3m5!1s0x6000e714602937cd:0x26b149a204023d46!8m2!3d34.6692979!4d135.5026443!16s%2Fg%2F1tdqtf4t?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1477,7 +1461,6 @@
                 <a
                   href="https://maps.google.com/maps?q=金龍ラーメン+道頓堀店"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1494,7 +1477,6 @@
                 <a
                   href="https://maps.google.com/maps?q=大起水産+回転寿司+道頓堀店"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1524,7 +1506,6 @@
                 <a
                   href="https://maps.google.com/maps?q=レゴランド・ディスカバリー・センター大阪"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1539,7 +1520,6 @@
                 <a
                   href="https://maps.google.com/maps?q=くら寿司+天保山店"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1554,7 +1534,6 @@
                 <a
                   href="https://maps.google.com/maps?q=天保山大観覧車"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1584,7 +1563,6 @@
                 <a
                   href="https://maps.google.com/maps?q=大阪たこ焼きミュージアム"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1601,7 +1579,6 @@
                 <a
                   href="https://maps.google.com/maps?q=Shake+Shack+ザ+パーク+フロント+ホテル店"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1618,7 +1595,6 @@
                 <a
                   href="https://maps.google.com/maps?q=ハードロックカフェ+ユニバーサル・シティウォーク大阪"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1648,7 +1624,6 @@
                 <a
                   href="https://maps.google.com/maps?q=アカチャンホンポ+大阪本町店"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1665,7 +1640,6 @@
                 <a
                   href="https://maps.google.com/maps?q=京都ヨドバシ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1682,7 +1656,6 @@
                 <a
                   href="https://maps.google.com/maps?q=京都タカシマヤ"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1712,7 +1685,6 @@
                 <a
                   href="https://maps.google.com/maps?q=名代とんかつ+かつくら+三条本店"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1727,7 +1699,6 @@
                 <a
                   href="https://maps.google.com/maps?q=京都水族館"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1744,7 +1715,6 @@
                 <a
                   href="https://maps.google.com/maps?q=スターバックス+コーヒー+京都二寧坂ヤサカ茶屋店"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1772,7 +1742,6 @@
                 <a
                   href="https://maps.google.com/maps?q=京都鉄道博物館"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1788,7 +1757,6 @@
                 <a
                   href="https://maps.google.com/maps?q=かに道楽+京都本店"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1803,7 +1771,6 @@
                 <a
                   href="https://maps.google.com/maps?q=八坂神社"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1833,7 +1800,6 @@
                 <a
                   href="https://maps.google.com/maps?q=りんくうプレジャータウンシークル"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1851,7 +1817,6 @@
                 <a
                   href="https://maps.google.com/maps?q=イオンモールりんくう泉南"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
@@ -1868,7 +1833,6 @@
                 <a
                   href="https://maps.google.com/maps?q=泉佐野漁協青空市場"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="shrink-0 bg-white border border-slate-200 text-blue-500 text-xs px-2 py-1 rounded shadow-sm hover:bg-slate-50"
                   >地圖</a
                 >
